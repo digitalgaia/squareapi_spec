@@ -64,7 +64,7 @@
 	<body>
 		<div class='container' style="margin-top: 80px;">
 		<div class="row">
-			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 				<ul id='left-menu'>
 					<?php foreach($apis as $module => $submodules):?>
 						<li class='module'><?php echo $module;?></li>
@@ -74,11 +74,11 @@
 					<?php endforeach;?>
 				</ul>
 			</div>
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 				<h2>Square Api Specification</h2>
 				<?php if($path == ''):?>
 				<?php else:?>
-						<h3><?php echo $path;?></h3>
+						<h3><b><?php echo $path;?></b></h3>
 					<?php if(!$data):?>
 						<h3>The api isn't created yet.</h3>
 					<?php else:?>

@@ -1,5 +1,12 @@
 {
-	"manage" : ["", "config", "product", "category", "tax", "order"],
+	"manage" : [
+		"", 
+		"config", 
+		"config.checkout.payment_method",
+		"config.checkout.shipping_detail",
+		"promotion.coupon",
+		"managers",
+		"product", "category", "tax", "order"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]
 }
