@@ -1,0 +1,5 @@
+{
+	"manage" : ["", "config", "product", "category", "tax", "order"],
+	"shop" : ["", "product", "cart"],
+	"user" : ["auth"]
+}

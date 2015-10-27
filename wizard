@@ -1,0 +1,4 @@
+<?php
+$exedra = require_once 'exedra';
+
+$exedra->wizard($argv);

@@ -1,0 +1,18 @@
+[
+	{
+		"path": "GET /manage/product",
+		"description" : "test",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		}
+	},
+	{
+		"path": "POST /manage/product",
+		"description" : "test",
+		"parameters" : {
+			"required" : ["name", "model", "price"],
+			"optional" : ["quantity", "weight"]
+		}
+	}
+]

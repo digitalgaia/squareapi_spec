@@ -1,0 +1,5 @@
+{
+    "require": {
+        "rosengate/exedra": "dev-master"
+    }
+}
