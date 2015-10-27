@@ -1,18 +1,73 @@
 [
 	{
 		"path": "GET /manage/product",
-		"description" : "test",
+		"description": "return list of products.",
+		"parameters" : {
+			"required" : [],
+			"optional" : ["offset"]
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path" : "GET /manage/product/:productId",
+		"description" : "get product detail",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
+		},
+		"response" : {
+			"data" : {
+				"id" : "",
+				"name" : "",
+				"model" : ""
+			}
 		}
 	},
 	{
 		"path": "POST /manage/product",
-		"description" : "test",
+		"description": "create product",
 		"parameters" : {
-			"required" : ["name", "model", "price"],
-			"optional" : ["quantity", "weight"]
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"product" : {
+				"description" : ["name","price","model"],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "PUT /manage/product",
+		"description": "update product",
+		"parameters" : {
+			"required" : ["name","price","model"],
+			"optional" : []
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+	{
+	"path": "DELETE /manage/product",
+		"description": "delete product",
+		"parameters" : [],
+		
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
 		}
 	}
 ]
+

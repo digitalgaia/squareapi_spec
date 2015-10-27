@@ -1,6 +1,7 @@
 <?php
 $exedra = require_once __DIR__.'/../exedra';
 
+error_reporting(E_ALL & ~E_NOTICE);
 return $exedra->build(array('name' => 'app', 'namespace' => 'ApiDocs'), function($app)
 {
 	if($app->loader->has('env.php'))
