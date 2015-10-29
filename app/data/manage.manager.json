@@ -1,6 +1,6 @@
 [
 	{
-		"path": "POST /manage/manager",
+		"path": "POST /manage/managers",
 		"description": "new manager",
 		"parameters" : {
 			"required" : [],
@@ -15,7 +15,7 @@
 	},
 
 	{
-		"path": "DELETE /manage/manager",
+		"path": "DELETE /manage/managers",
 		"description": "delete manger",
 		"parameters" : {
 			"required" : [""],
