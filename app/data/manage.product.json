@@ -58,9 +58,10 @@
 		}
 	},
 	{
-	"path": "DELETE /manage/product",
+	"path": "DELETE /manage/productId",
 		"description": "delete product",
 		"parameters" : [],
+
 		
 		"response" : {
 			"product" : {

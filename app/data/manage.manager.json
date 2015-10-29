@@ -1,0 +1,32 @@
+[
+	{
+		"path": "POST /manage/manager",
+		"description": "new manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"manager" : {
+				"description" : ["name"],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "DELETE /manage/manager",
+		"description": "delete manger",
+		"parameters" : {
+			"required" : [""],
+			"optional" : []
+		},
+		"response" : {
+			"manager" : {
+				"description" : [""],
+				"type" :[]
+				}
+		}
+	}
+]
+
