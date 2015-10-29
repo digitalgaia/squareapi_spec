@@ -1,0 +1,19 @@
+[
+	{
+		"path": "GET /manage/checkout_information/payment",
+		"description": "list of payment.",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"checkout information" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	}
+
+
+]
+

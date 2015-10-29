@@ -1,0 +1,59 @@
+
+[
+	{
+		"path": "GET /manage/categories",
+		"description": "return list of categories.",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"categories" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path": "POST /manage/categories",
+		"description": "create categories",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"categories" : {
+				"description" : ["categories_name"],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "PUT /manage/categories",
+		"description": "update categories",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : {
+			"categories" : {
+				"description" : ["categories_name"],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "DELETE /manage/categories",
+		"description": "delete categories",
+		"parameters" : [],
+		
+		"response" : {
+			"categories" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	}
+]
+

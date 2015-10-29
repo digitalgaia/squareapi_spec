@@ -1,0 +1,15 @@
+
+	{
+		"path": "GET /manage/checkout_information/shipping",
+		"description": "list of shipping.",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"checkout information" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	}
