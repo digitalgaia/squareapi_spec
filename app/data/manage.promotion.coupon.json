@@ -1,0 +1,54 @@
+[
+	{
+		"path": "POST /manage/promotion/coupon",
+		"description": "Add new promotion",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"promotion" : {
+				"description" : ["coupon_name","code"],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "PUT /manage/promotion/coupon",
+		"description": "update coupon",
+		"parameters" : {
+			"required" : ["coupon_name","code"],
+			"optional" : []
+		},
+		"response" : {
+			"promotion" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+
+	{
+		"path": "DELETE / /manage/promotion/coupon",
+		"description": "delete coupon",
+		"parameters" : [],
+		
+		"response" : {
+			"orders" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	]

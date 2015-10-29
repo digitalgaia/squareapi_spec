@@ -5,7 +5,7 @@
 		"config.checkout.payment_method",
 		"config.checkout.shipping_detail",
 		"promotion.coupon",
-		"managers",
+		"manager",
 		"product", "category", "tax", "order"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]

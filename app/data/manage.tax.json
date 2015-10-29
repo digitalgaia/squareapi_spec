@@ -1,0 +1,60 @@
+[
+
+	{
+		"path": "POST /manage/tax",
+		"description": "add new tax",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"tax" : {
+				"description" : ["tax_name","tax_value"],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "PUT /manage/tax",
+		"description": "update tax",
+		"parameters" : {
+			"required" : ["tax_name","tax_value"],
+			"optional" : []
+		},
+		"response" : {
+			"tax" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path": "DELETE /manage/tax",
+		"description": "delete tax",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"tax" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+	{
+		"path" : "GET /manage/tax/:taxId",
+		"description" : "get tax detail",
+		"parameters" : {
+			"required" : ["tax_name","tax_value"],
+			"optional" : []
+		},
+		"response" : {
+			"data" : {
+				"id" : "",
+				"name" : "",
+				"model" : ""
+			}
+		}
+	}
+]
