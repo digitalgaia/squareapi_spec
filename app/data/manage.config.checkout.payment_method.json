@@ -1,7 +1,7 @@
 [
 	{
-		"path": "GET /manage/checkout_information/payment",
-		"description": "list of payment.",
+		"path": "GET /manage/config/checkout/payment",
+		"description": "list of payment",
 		"parameters" : {
 			"required" : [],
 			"optional" : []

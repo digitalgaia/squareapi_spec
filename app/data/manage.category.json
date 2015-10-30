@@ -1,14 +1,14 @@
 
 [
 	{
-		"path": "GET /manage/categories",
-		"description": "return list of categories.",
+		"path": "GET /manage/category",
+		"description": "return list of category.",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
 		"response" : {
-			"categories" : {
+			"category" : {
 				"description" : [],
 				"type" : []
 				}
@@ -16,40 +16,42 @@
 	},
 
 	{
-		"path": "POST /manage/categories",
-		"description": "create categories",
+		"path": "POST /manage/category",
+		"description": "create category",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
 		"response" : {
-			"categories" : {
+			"category" : {
 				"description" : ["categories_name"],
 				"type" :[]
 				}
 		}
 	},
 	{
-		"path": "PUT /manage/categories",
-		"description": "update categories",
+		"path": "PUT /manage/:categoryId",
+		"description": "update category",
 		"parameters" : {
 			"required" : ["name"],
 			"optional" : []
 		},
 		"response" : {
-			"categories" : {
+			"category" : {
 				"description" : ["categories_name"],
 				"type" :[]
 				}
 		}
 	},
 	{
-		"path": "DELETE /manage/categories",
-		"description": "delete categories",
-		"parameters" : [],
-		
+		"path": "DELETE /manage/:categoryId",
+		"description": "delete category",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
 		"response" : {
-			"categories" : {
+			"category" : {
 				"description" : [],
 				"type" :[]
 				}

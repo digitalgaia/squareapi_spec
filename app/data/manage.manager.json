@@ -1,7 +1,22 @@
 [
 	{
-		"path": "POST /manage/managers",
-		"description": "new manager",
+		"path": "GET /manage/manager",
+		"description": "return list of manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path": "POST /manage/manager",
+		"description": "add new manager",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -15,15 +30,15 @@
 	},
 
 	{
-		"path": "DELETE /manage/managers",
+		"path": "DELETE /manage/managerId",
 		"description": "delete manger",
 		"parameters" : {
-			"required" : [""],
+			"required" : [],
 			"optional" : []
 		},
 		"response" : {
 			"manager" : {
-				"description" : [""],
+				"description" : [],
 				"type" :[]
 				}
 		}

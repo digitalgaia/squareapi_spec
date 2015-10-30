@@ -1,10 +1,10 @@
 [
 	{
 		"path": "GET /manage/product",
-		"description": "return list of products.",
+		"description": "return list of product",
 		"parameters" : {
 			"required" : [],
-			"optional" : ["offset"]
+			"optional" : []
 		},
 		"response" : {
 			"product" : {
@@ -44,7 +44,7 @@
 		}
 	},
 	{
-		"path": "PUT /manage/product",
+		"path": "PUT /manage/productId",
 		"description": "update product",
 		"parameters" : {
 			"required" : ["name","price","model"],
@@ -58,11 +58,12 @@
 		}
 	},
 	{
-	"path": "DELETE /manage/productId",
+	"path": "DELETE /manage/:productId",
 		"description": "delete product",
-		"parameters" : [],
-
-		
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
 		"response" : {
 			"product" : {
 				"description" : [],

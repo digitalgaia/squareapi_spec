@@ -1,0 +1,34 @@
+[
+	{
+		"path": "GET /manage/config",
+		"description": "return list of config",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"config" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/config",
+		"description": "update config",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"config" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	}
+
+
+]
+

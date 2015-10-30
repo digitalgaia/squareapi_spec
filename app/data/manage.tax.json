@@ -1,4 +1,18 @@
 [
+	{
+		"path": "GET /manage/tax",
+		"description": "return tax of product",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"tax" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
 
 	{
 		"path": "POST /manage/tax",
@@ -15,7 +29,7 @@
 		}
 	},
 	{
-		"path": "PUT /manage/tax",
+		"path": "PUT /manage/tax/:taxId",
 		"description": "update tax",
 		"parameters" : {
 			"required" : ["tax_name","tax_value"],
@@ -29,7 +43,7 @@
 		}
 	},
 	{
-		"path": "DELETE /manage/tax",
+		"path": "DELETE /manage/tax/:taxId",
 		"description": "delete tax",
 		"parameters" : {
 			"required" : [],

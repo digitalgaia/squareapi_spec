@@ -1,7 +1,21 @@
 [
 	{
+		"path": "GET /manage/promotion/coupon",
+		"description": "return list of promotion",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+	{
 		"path": "POST /manage/promotion/coupon",
-		"description": "Add new promotion",
+		"description": "add new coupon",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -14,7 +28,7 @@
 		}
 	},
 	{
-		"path": "PUT /manage/promotion/coupon",
+		"path": "PUT /manage/promotion/coupon/:couponId",
 		"description": "update coupon",
 		"parameters" : {
 			"required" : ["coupon_name","code"],
@@ -30,25 +44,17 @@
 
 
 	{
-		"path": "DELETE / /manage/promotion/coupon",
+		"path": "DELETE / manage/promotion/coupon/:couponId",
 		"description": "delete coupon",
-		"parameters" : [],
-		
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
 		"response" : {
-			"orders" : {
+			"promotion" : {
 				"description" : [],
 				"type" :[]
 				}
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-	]
+]

@@ -1,21 +1,7 @@
 [
 	{
-		"path": "POST /manage/order",
-		"description": "create tracking number",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"categories" : {
-				"description" : ["tracking_number"],
-				"type" :[]
-				}
-		}
-	},
-	{
 		"path": "GET /manage/order",
-		"description": "get list of order.",
+		"description": "get list of order",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -28,7 +14,22 @@
 		}
 	},
 	{
-		"path": "PUT /manage/order",
+		"path": "PUT /manage/order/orderId",
+		"description": "create tracking number",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"categories" : {
+				"description" : ["tracking_number"],
+				"type" :[]
+				}
+		}
+	},
+	
+	{
+		"path": "PUT /manage/order/orderId",
 		"description": "update status",
 		"parameters" : {
 			"required" : ["name"],
@@ -57,17 +58,19 @@
 		}
 	},
 	{
-		"path": "DELETE /manage/order",
+		"path": "DELETE /manage/order/:orderId",
 		"description": "delete order",
-		"parameters" : [],
-		
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
 		"response" : {
-			"order" : {
-				"description" : [],
-				"type" :[]
-				}
+			"data" : {
+				"id" : "",
+				"name" : "",
+				"model" : ""
+			}
 		}
 	}
-
 ]
 
