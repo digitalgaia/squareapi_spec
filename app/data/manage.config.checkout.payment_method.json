@@ -7,9 +7,54 @@
 			"optional" : []
 		},
 		"response" : {
-			"checkout information" : {
+			"payment" : {
 				"description" : [],
 				"type" : []
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/config/checkout/payment/currency/:currencyId",
+		"description": "update currency",
+		"parameters" : {
+			"required" : ["currency"],
+			"optional" : []
+		},
+		"response" : {
+			"payment" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/config/checkout/payment/method/paypal",
+		"description": "update paypal information",
+		"parameters" : {
+			"required" : ["paypal_information"],
+			"optional" : ["email"]
+		},
+		"response" : {
+			"payment" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/config/checkout/payment/method/molpay",
+		"description": "update detail",
+		"parameters" : {
+			"required" : ["molpay_information"],
+			"optional" : ["admin","code"]
+		},
+		"response" : {
+			"payment" : {
+				"description" :[],
+				"type" :[]
 				}
 		}
 	}

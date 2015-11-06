@@ -3,60 +3,108 @@
 		"path": "GET /manage/order",
 		"description": "get list of order",
 		"parameters" : {
-			"required" : [],
+			"required" : ["page"],
 			"optional" : []
 		},
 		"response" : {
-			"orders" : {
+			"order" : {
 				"description" : [],
 				"type" : []
 				}
 		}
 	},
 	{
-		"path": "PUT /manage/order/orderId",
+		"path": "PUT /manage/order/:orderId/tracking_number",
 		"description": "create tracking number",
 		"parameters" : {
-			"required" : [],
+			"required" : ["tracking_number"],
 			"optional" : []
 		},
 		"response" : {
-			"categories" : {
-				"description" : ["tracking_number"],
+			"order" : {
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
-	
+
 	{
-		"path": "PUT /manage/order/orderId",
+		"path": "GET /manage/order/:orderId/tracking_number",
+		"description": "get tracking number",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"order" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/order/:orderId/status",
 		"description": "update status",
 		"parameters" : {
-			"required" : ["name"],
+			"required" : ["status"],
 			"optional" : []
 		},
 		"response" : {
-			"categories" : {
-				"description" : ["status"],
+			"order" : {
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
+
 	{
-		"path" : "GET /manage/order",
-		"description" : "get order detail",
+		"path": "GET /manage/order/:orderId/status",
+		"description": "get status",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
 		"response" : {
-			"data" : {
+			"order" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path" : "GET /manage/order/:orderId/customer",
+		"description" : "get customer detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"order" : {
 				"id" : "",
 				"name" : "",
 				"model" : ""
 			}
 		}
 	},
+
+	{
+		"path" : "GET /manage/order/:orderId/product",
+		"description" : "get product detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"order" : {
+				"id" : "",
+				"name" : "",
+				"model" : ""
+			}
+		}
+	},
+
 	{
 		"path": "DELETE /manage/order/:orderId",
 		"description": "delete order",
@@ -65,7 +113,7 @@
 			"optional" : []
 		},
 		"response" : {
-			"data" : {
+			"order" : {
 				"id" : "",
 				"name" : "",
 				"model" : ""

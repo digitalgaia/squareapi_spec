@@ -1,0 +1,64 @@
+[
+	{
+		"path": "DELETE /shop/cart/product",
+		"description": "delete product from cart",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"cart" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "POST /shop/cart/coupon",
+		"description": "apply coupon to cart ",
+		"parameters" : {
+			"required" : ["code"],
+			"optional" : []
+		},
+		"response" : {
+			"cart" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "POST /shop/cart/shipping",
+		"description": "add shipping information",
+		"parameters" : {
+			"required" : ["name","address","city","country","state","zip","phone number","email"],
+			"optional" : []
+		},
+		"response" : {
+			"cart" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "POST /shop/cart/payment",
+		"description": "choose payment",
+		"parameters" : {
+			"required" : ["payment"],
+			"optional" : []
+		},
+		"response" : {
+			"cart" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	}
+
+
+]
+

@@ -22,32 +22,49 @@
 			"optional" : []
 		},
 		"response" : {
-			"data" : {
+			"product" : {
 				"id" : "",
 				"name" : "",
 				"model" : ""
 			}
 		}
 	},
+
 	{
 		"path": "POST /manage/product",
 		"description": "create product",
 		"parameters" : {
-			"required" : [],
-			"optional" : []
+			"required" : ["name"],
+			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
 		},
 		"response" : {
 			"product" : {
-				"description" : ["name","price","model"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
+
 	{
-		"path": "PUT /manage/productId",
+		"path": "PUT /manage/product/:productId",
 		"description": "update product",
 		"parameters" : {
-			"required" : ["name","price","model"],
+			"required" : ["name"],
+			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+	"path": "DELETE /manage/product/:productId",
+		"description": "delete product",
+		"parameters" : {
+			"required" : [],
 			"optional" : []
 		},
 		"response" : {
@@ -57,9 +74,71 @@
 				}
 		}
 	},
+
 	{
-	"path": "DELETE /manage/:productId",
-		"description": "delete product",
+		"path": "GET /manage/variation",
+		"description": "return list of variation",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"variation" : {
+				"description" : [],
+				"type" : []
+				}
+		}
+	},
+
+	{
+		"path" : "GET /manage/product/:variationId",
+		"description" : "get variation detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"product" : {
+				"id" : "",
+				"name" : "",
+				"model" : ""
+			}
+		}
+	},
+
+	{
+		"path": "POST /manage/product/variation",
+		"description": "create variation",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : ["option"]
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "PUT /manage/product/:variationId",
+		"description": "update variation",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : ["option"]
+		},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+	"path": "DELETE /manage/product/:variationId",
+		"description": "delete variation",
 		"parameters" : {
 			"required" : [],
 			"optional" : []

@@ -1,7 +1,7 @@
 [
 
 	{
-		"path": "GET /manage/config/checkout/shipping",
+		"path": "GET /manage/config/checkout/shipping/method",
 		"description": "list of shipping",
 		"parameters" : {
 			"required" : [],
@@ -16,25 +16,10 @@
 	},
 
 	{
-		"path": "GET /manage/config/checkout/shipping/pos_laju",
-		"description": "read pos laju detail",
+		"path": "POST /manage/config/checkout/shipping/method",
+		"description": "choose shipping method",
 		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"checkout information" : {
-				"description" : [],
-				"type" : []
-				}
-		}
-	}
-
-	{
-		"path": "POST /manage/config/checkout/shipping/pos_laju",
-		"description": "add global estimate delivery time",
-		"parameters" : {
-			"required" : [],
+			"required" : ["method"],
 			"optional" : []
 		},
 		"response" : {
@@ -46,29 +31,14 @@
 	},
 
 	{
-		"path": "PUT /manage/config/checkout/shipping/pos_laju/:pos_lajuId",
+		"path": "PUT /manage/config/checkout/shipping/method/edt",
 		"description": "update estimate delivery time",
 		"parameters" : {
-			"required" : [],
+			"required" : ["edt"],
 			"optional" : []
 		},
 		"response" : {
 			"shipping" : {
-				"description" : ["estimate delivery time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-	"path": "DELETE /manage/config/checkout/shipping/pos_laju/:pos_lajuId",
-		"description": "delete estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
 				"description" : [],
 				"type" :[]
 				}
@@ -76,163 +46,10 @@
 	},
 	
 	{
-		"path" : "GET /manage/config/checkout/shipping/flexipack",
-		"description" : "read flexipack detail",
+		"path": "PUT /manage/config/checkout/shipping/method/flat_rate/option",
+		"description": "update flat rate option",
 		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-
-	{
-		"path": "POST /manage/config/checkout/shipping/flexipack",
-		"description": "add global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/config/checkout/shipping/flexipack/:flexipackId",
-		"description": "update estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"shipping" : {
-				"description" : ["estimate delivery time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-	"path": "DELETE /manage/config/checkout/shipping/flexipack/:flexipackId",
-		"description": "delete estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path" : "GET /manage/config/checkout/shipping/city_link",
-		"description" : "read city link",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-	
-	{
-		"path": "POST /manage/config/checkout/shipping/city_link",
-		"description": "add global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/config/checkout/shipping/city_link/:city_linkId",
-		"description": "update estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"shipping" : {
-				"description" : ["estimate delivery time"],
-				"type" :[]
-				}
-		}
-	},
-	
-	{
-	"path": "DELETE /manage/config/checkout/shipping/city_link/:city_linkId",
-		"description": "delete estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path" : "GET /manage/config/checkout/shipping/flat_rate",
-		"description" : "read flat rate",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-	
-	{
-		"path": "POST /manage/config/checkout/shipping/flat_rate/per_order/rate",
-		"description": "add rate",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["rate"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/config/checkout/shipping/flat_rate/per_order/rate/:rateId",
-		"description": "update flat rate",
-		"parameters" : {
-			"required" : ["default_rate"],
+			"required" : ["option"],
 			"optional" : []
 		},
 		"response" : {
@@ -244,116 +61,10 @@
 	},
 
 	{
-	"path": "DELETE /manage/config/checkout/shipping/flat_rate/per_order/rate/:rateId",
-		"description": "delete rate",
+		"path": "PUT /manage/config/checkout/shipping/method/shipping_table/option",
+		"description": "update shipping table option",
 		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["rate"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path" : "GET /manage/config/checkout/shipping/flat_rate/global_estimate_delivery_time",
-		"description" : "read global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-
-	{
-		"path": "POST /manage/config/checkout/shipping/flat_rate/global_estimate_delivery_time",
-		"description": "add global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/config/checkout/shipping/shipping_table/flat_rate/global_estimate_delivery_time/global_estimate_delivery_timeId",
-		"description": "update global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"shipping" : {
-				"description" : ["estimate delivery time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-	"path": "DELETE /manage/config/checkout/shipping/shipping_table/flat_rate/global_estimate_delivery_time/global_estimate_delivery_timeId",
-		"description": "delete default rate",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "GET /manage/config/checkout/shipping/shipping_table/shipping_tableId",
-		"description": "list of shipping table",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"checkout information" : {
-				"description" : [],
-				"type" : []
-				}
-		}
-	},
-	
-	{
-		"path": "POST /manage/config/checkout/shipping/shipping_table",
-		"description": "add rate",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["rate"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/config/checkout/shipping/shipping_table",
-		"description": "update flat rate",
-		"parameters" : {
-			"required" : ["default_rate"],
+			"required" : ["option"],
 			"optional" : []
 		},
 		"response" : {
@@ -365,130 +76,52 @@
 	},
 
 	{
-	"path": "DELETE /manage/config/checkout/shipping/shipping_table",
-		"description": "delete rate",
+		"path": "PUT /manage/config/checkout/shipping/method/shipping_table/default_rate",
+		"description": "update default rate",
 		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path" : "GET /manage/config/checkout/shipping/shipping_table",
-		"description" : "read global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-
-	{
-		"path": "POST /manage/config/checkout/shipping/shipping_table",
-		"description": "add global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : ["time"],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-	"path": "DELETE /manage/config/checkout/shipping/shipping_table/shipping_tableId",
-		"description": "delete global estimate delivery time",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-	
-	{
-		"path": "PUT /manage/config/checkout/shipping/shipping_table/:shipping_tableId",
-		"description": "update global estimate delivery time",
-		"parameters" : {
-			"required" : [],
+			"required" : ["rate"],
 			"optional" : []
 		},
 		"response" : {
 			"shipping" : {
-				"description" : ["estimate delivery time"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 
 	{
-		"path" : "GET /manage/config/checkout/shipping/shipping_table/congfigure/configure_shipping",
-		"description" : "get shipping table detail",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"data" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-
-
-	{
-		"path": "POST /manage/config/checkout/shipping/shipping_table/configure_shipping",
+		"path": "POST /manage/config/checkout/shipping/method/shipping_table/range",
 		"description": "add range",
 		"parameters" : {
-			"required" : [],
+			"required" : ["postcode_start","postcode_end","rate","country"],
 			"optional" : []
 		},
 		"response" : {
 			"product" : {
-				"description" : ["postcode","rate"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 
 	{
-		"path": "PUT /manage/config/checkout/shipping/shipping_table/configure_shipping/:configure_shippingId",
+		"path": "PUT /manage/config/checkout/shipping/method/shipping_table/range/:id",
 		"description": "update range",
 		"parameters" : {
-			"required" : [],
+			"required" : ["postcode_start","postcode_end","rate"],
 			"optional" : []
 		},
 		"response" : {
 			"shipping" : {
-				"description" : ["postcode","rate"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 
 	{
-	"path": "DELETE /manage/config/checkout/shipping/shipping_table/configure_shipping/:configure_shippingId",
+	"path": "DELETE /manage/config/checkout/shipping/method/shipping_table/range/:id",
 		"description": "delete range",
 		"parameters" : {
 			"required" : [],
@@ -500,7 +133,7 @@
 				"type" :[]
 				}
 		}
-	},
+	}
 
 
 ]

@@ -2,7 +2,7 @@
 [
 	{
 		"path": "GET /manage/category",
-		"description": "return list of category.",
+		"description": "return list of category",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -19,18 +19,18 @@
 		"path": "POST /manage/category",
 		"description": "create category",
 		"parameters" : {
-			"required" : [],
+			"required" : ["name"],
 			"optional" : []
 		},
 		"response" : {
 			"category" : {
-				"description" : ["categories_name"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 	{
-		"path": "PUT /manage/:categoryId",
+		"path": "PUT /manage/category/:categoryId",
 		"description": "update category",
 		"parameters" : {
 			"required" : ["name"],
@@ -38,13 +38,13 @@
 		},
 		"response" : {
 			"category" : {
-				"description" : ["categories_name"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 	{
-		"path": "DELETE /manage/:categoryId",
+		"path": "DELETE /manage/category/:categoryId",
 		"description": "delete category",
 		"parameters" : {
 			"required" : [],

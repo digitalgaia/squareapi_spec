@@ -6,7 +6,11 @@
 		"config.checkout.shipping_detail",
 		"promotion.coupon",
 		"manager",
-		"product", "category", "tax", "order"],
+		"product",
+		"variation",
+		"category",
+		"tax", 
+		"order"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]
 }

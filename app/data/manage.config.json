@@ -18,6 +18,21 @@
 		"path": "PUT /manage/config",
 		"description": "update config",
 		"parameters" : {
+			"required" : ["@config"],
+			"optional" : []
+		},
+		"response" : {
+			"config" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "DELETE /manage/config",
+		"description": "delete config",
+		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},

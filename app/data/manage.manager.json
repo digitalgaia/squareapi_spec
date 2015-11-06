@@ -7,7 +7,7 @@
 			"optional" : []
 		},
 		"response" : {
-			"product" : {
+			"manager" : {
 				"description" : [],
 				"type" : []
 				}
@@ -18,22 +18,37 @@
 		"path": "POST /manage/manager",
 		"description": "add new manager",
 		"parameters" : {
-			"required" : [],
+			"required" : ["name","email"],
 			"optional" : []
 		},
 		"response" : {
 			"manager" : {
-				"description" : ["name"],
+				"description" : [],
 				"type" :[]
 				}
 		}
 	},
 
 	{
-		"path": "DELETE /manage/managerId",
-		"description": "delete manger",
+		"path": "DELETE /manage/manager/:managerId",
+		"description": "delete manager",
 		"parameters" : {
 			"required" : [],
+			"optional" : []
+		},
+		"response" : {
+			"manager" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
+	},
+
+	{
+		"path": "POST /manage/manager/:managerId/upgrade",
+		"description": "upgrade manager",
+		"parameters" : {
+			"required" : ["name","email"],
 			"optional" : []
 		},
 		"response" : {
