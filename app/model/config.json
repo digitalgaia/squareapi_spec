@@ -1,0 +1,27 @@
+{
+    "name": "config",
+    "relation": [
+
+    ],
+    "description": "Shop configuration model",
+    "data": [
+        {
+            "name": "shop_name",
+            "description": "shop name",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shop_description",
+            "description": "shop description",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shop_about",
+            "description": "about us information",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

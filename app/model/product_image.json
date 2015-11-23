@@ -1,0 +1,30 @@
+{
+    "name": "product_image",
+    "relation": [
+        {
+            "model": "product",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "Product images",
+    "data": [
+        {
+            "name": "id",
+            "description": "unique product image id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "product_id",
+            "description": "product id",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "src",
+            "description": "absolute image path",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

@@ -7,7 +7,11 @@
 		<title>Square API : <?php echo '/'.str_replace('.', '/', $path);?></title>
 
 		<!-- Bootstrap CSS -->
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<?php echo $exe->asset->js('js/jquery-1.11.3.min.js');?>
+		<title>Square API : <?php echo '/'.str_replace('.', '/', $path);?></title>
+
+		<!-- Bootstrap CSS -->
+		<?php echo $exe->asset->css('css/bootstrap.min.css');?>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,6 +20,9 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<style type="text/css">
+		*
+		{
+		}
 		#left-menu
 		{
 			list-style: none;
@@ -62,66 +69,22 @@
 		</style>
 	</head>
 	<body>
-		<div class='container' style="margin-top: 80px;">
+		<div class='container' style="margin-top: 40px;">
 		<div class="row">
-			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-				<ul id='left-menu'>
-					<?php foreach($apis as $module => $submodules):?>
-						<li class='module'><?php echo $module;?></li>
-						<?php foreach($submodules as $submodule):?>
-							<li class='submodule'><a href='<?php echo $exe->url->create('spec', $submodule ? array('path' => $module.'.'.$submodule) : array());?>'><?php echo $submodule ? : '[base]';?></a></li>
-						<?php endforeach;?>
-					<?php endforeach;?>
-				</ul>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<?php $route = $exe->getRoute();?>
+				<div>
+					<ul class="nav nav-tabs">
+  						<li <?php if($exe->hasRoute('@spec')):?>class="active"<?php endif;?>><a href="<?php echo $exe->url->base();?>">API</a></li>
+  						<!-- <li <?php if($exe->hasRoute('@model')):?>class="active"<?php endif;?>><a href="<?php echo $exe->url->create('@model.add');?>">Response</a></li> -->
+  						<li <?php if($exe->hasRoute('@model')):?>class="active"<?php endif;?>><a href="<?php echo $exe->url->create('@model.add');?>">Models</a></li>
+  						<li <?php if($exe->hasRoute('@rule')):?>class="active"<?php endif;?>><a href="<?php echo $exe->url->create('@rule');?>">Rule of thumbs</a></li>
+  					</ul>
+				</div>
 			</div>
-			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-				<h2>Square Api Specification</h2>
-				<?php if($path == ''):?>
-				<?php else:?>
-						<h3><b><?php echo $path;?></b></h3>
-					<?php if(!$data):?>
-						<h3>The api isn't created yet.</h3>
-					<?php else:?>
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<?php foreach($data as $row):?>
-									<table class='api-table'>
-										<tr>
-											<th>Path</th><td><?php echo $row['path'];?></td>
-										</tr>
-										<tr>
-											<th>Description</th><td><?php echo $row['description'];?></td>
-										</tr>
-										<tr>
-											<th>Parameters</th>
-											<td>
-												<div>Required</div>
-												<ul>
-													<?php if(count($row['parameters']['required']) == 0):?>
-														<li>[none]</li>
-													<?php endif;?>
-													<?php foreach($row['parameters']['required'] as $param):?>
-													<li><?php echo $param;?></li>
-													<?php endforeach;?>
-												</ul>
-												<div>Optional</div>
-												<ul>
-													<?php if(count($row['parameters']['optional']) == 0):?>
-														<li>[none]</li>
-													<?php endif;?>
-													<?php foreach($row['parameters']['optional'] as $param):?>
-													<li><?php echo $param;?></li>
-													<?php endforeach;?>
-												</ul>
-											</td>
-										</tr>
-									</table>
-								<?php endforeach;?>
-							</div>
-						</div>
-					<?php endif;?>
-				<?php endif;?>
-			</div>
+		</div>
+		<div class="row">
+			<?php $view->render();?>
 		</div>
 		</div>
 	</body>

@@ -1,32 +1,22 @@
 [
 	{
 		"path": "GET /manage/config",
-		"description": "return list of config",
+		"description": "get all config",
 		"parameters" : {
 			"required" : [],
-			"optional" : []
+			"optional" : ["@config:fields"]
 		},
-		"response" : {
-			"config" : {
-				"description" : [],
-				"type" : []
-				}
-		}
+		"response" : "@config"
 	},
 
 	{
 		"path": "PUT /manage/config",
 		"description": "update config",
 		"parameters" : {
-			"required" : ["@config"],
+			"required" : ["@config:array:fields"],
 			"optional" : []
 		},
-		"response" : {
-			"config" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	},
 
 	{
@@ -36,12 +26,7 @@
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"config" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	}
 
 

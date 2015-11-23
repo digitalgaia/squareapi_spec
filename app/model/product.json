@@ -1,0 +1,40 @@
+{
+    "name": "product",
+    "relation": [
+        {
+            "model": "product_image",
+            "type": "one-to-many"
+        },
+        {
+            "model": "product_variation",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "Product information",
+    "data": [
+        {
+            "name": "id",
+            "description": "product primary id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "name",
+            "description": "Product name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "model",
+            "description": "product model or SKU",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "quantity",
+            "description": "Product current quantity",
+            "type": "integer",
+            "required": false
+        }
+    ]
+}

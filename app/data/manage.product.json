@@ -6,30 +6,17 @@
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" : []
-				}
-		}
+		"response" : "array:@product"
 	},
-
 	{
 		"path" : "GET /manage/product/:productId",
 		"description" : "get product detail",
 		"parameters" : {
 			"required" : [],
-			"optional" : []
+			"optional" : ["fields"]
 		},
-		"response" : {
-			"product" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
+		"response" : "@product"
 	},
-
 	{
 		"path": "POST /manage/product",
 		"description": "create product",
@@ -37,14 +24,8 @@
 			"required" : ["name"],
 			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
 		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : "@product"
 	},
-
 	{
 		"path": "PUT /manage/product/:productId",
 		"description": "update product",
@@ -52,14 +33,8 @@
 			"required" : ["name"],
 			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
 		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	},
-
 	{
 	"path": "DELETE /manage/product/:productId",
 		"description": "delete product",
@@ -67,88 +42,25 @@
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	},
-
 	{
-		"path": "GET /manage/variation",
-		"description": "return list of variation",
+		"path": "GET /manage/product/variation",
+		"description": "get product variation and option",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"variation" : {
-				"description" : [],
-				"type" : []
-				}
-		}
+		"response" : "@product_variation"
 	},
-
-	{
-		"path" : "GET /manage/product/:variationId",
-		"description" : "get variation detail",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : {
-			"product" : {
-				"id" : "",
-				"name" : "",
-				"model" : ""
-			}
-		}
-	},
-
 	{
 		"path": "POST /manage/product/variation",
-		"description": "create variation",
-		"parameters" : {
-			"required" : ["name"],
-			"optional" : ["option"]
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-		"path": "PUT /manage/product/:variationId",
-		"description": "update variation",
-		"parameters" : {
-			"required" : ["name"],
-			"optional" : ["option"]
-		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
-	},
-
-	{
-	"path": "DELETE /manage/product/:variationId",
-		"description": "delete variation",
-		"parameters" : {
-			"required" : [],
+		"description": "assign variation to this product",
+		"parameters": {
+			"required" : ["@variation:variation_id"],
 			"optional" : []
 		},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	}
 ]
 

@@ -1,0 +1,36 @@
+{
+    "name": "product_variation_option",
+    "relation": [
+        {
+            "model": "product_variation",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "option to a variation",
+    "data": [
+        {
+            "name": "id",
+            "description": "id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "product_variation_id",
+            "description": "variation id",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "option name",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "quantity",
+            "description": "quantity left",
+            "type": "integer",
+            "required": false
+        }
+    ]
+}
