@@ -1,0 +1,42 @@
+[
+	{
+		"path": "GET /shop/:shop-id/product",
+		"description": "return invoice src",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@invoice"
+	},
+	
+	{
+		"path": "GET /shop/:shop-id/invoice/:invoiceId/logo",
+		"description": "get logo",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@invoice"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/invoice/:invoiceId/logo",
+		"description": "get logo",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@invoice"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/invoice/:invoiceId",
+		"description": "update invoice",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+			},
+		"response" : ""
+	}
+
+]

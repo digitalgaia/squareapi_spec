@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b5ad4ecb5b3846bb84f7d9a8ad748b9a",
+    "hash": "9f07b0b1b59ad88931278d24a518a955",
+    "content-hash": "49131079849175ecac324af5c9acd8b4",
     "packages": [
         {
             "name": "rosengate/exedra",

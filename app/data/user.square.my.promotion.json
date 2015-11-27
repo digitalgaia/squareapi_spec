@@ -1,61 +1,51 @@
 [
 	{
-		"path": "GET /manage/promotion/coupon",
+		"path": "GET /shop/:shop-id/promotion/coupon",
 		"description": "return list of coupon",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"coupon" : {
-				"description" : [],
-				"type" : []
-				}
-		}
+		"response" : "@promotion"
 	},
 
 	{
-		"path": "POST /manage/promotion/coupon",
+		"path": "POST /shop/:shop-id/promotion/coupon",
 		"description": "add new coupon",
 		"parameters" : {
 			"required" : ["name","code","type","amount","ongoing"],
 			"optional" : ["date_start","date_end","quantity","minimum_purchase"]
 		},
-		"response" : {
-			"coupon" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : "@promotion"
 	},
 
 	{
-		"path": "PUT /manage/promotion/coupon/:couponId",
+		"path": "PUT /shop/:shop-id/promotion/coupon/:couponId",
 		"description": "update coupon",
 		"parameters" : {
 			"required" : ["name","code","type","amount","ongoing"],
 			"optional" : ["date_start","date_end","quantity","minimum_purchase"]
 		},
-		"response" : {
-			"coupon" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
 	},
 
 	{
-		"path": "DELETE / manage/promotion/coupon/:couponId",
+		"path": "DELETE / shop/:shop-id/promotion/coupon/:couponId",
 		"description": "delete coupon",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
-		"response" : {
-			"coupon" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
+		"response" : ""
+	},
+
+	{
+		"path": "POST /shop/:shop-id/promotion/free_shipping",
+		"description": "Add price for free shipping",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
 	}
 ]

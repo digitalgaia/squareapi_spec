@@ -1,0 +1,43 @@
+{
+    "name": "promotion",
+    "relation": [],
+    "description": "promotion description",
+    "data": [
+        {
+            "name": "name",
+            "description": "coupon name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "code",
+            "description": "coupon code",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "coupon type",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "amount",
+            "description": "coupon amount",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "quantity",
+            "description": "coupon quantity",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "purchase",
+            "description": "minimum of purchase",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

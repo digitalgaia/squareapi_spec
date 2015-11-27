@@ -1,0 +1,13 @@
+{
+    "name": "invoice",
+    "relation": [],
+    "description": "invoice description",
+    "data": [
+        {
+            "name": "logo",
+            "description": "choose invoice logo",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+[
+	{
+		"path": "POST /shop/:shop-id/link/twitter",
+		"description": "create link to twitter URL",
+		"parameters" : {
+			"required" : ["twitter URL"],
+			"optional" : []
+			},
+		"response" : "@link"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/link/instagram",
+		"description": "create link to instagram URL",
+		"parameters" : {
+			"required" : ["instagram URL"],
+			"optional" : []
+			},
+		"response" : "@link"
+	}, 
+
+	{
+		"path": "POST /shop/:shop-id/link/google_account_id",
+		"description": "create link to Google Analytic Account ID",
+		"parameters" : {
+			"required" : ["Google Analytic Account ID"],
+			"optional" : []
+			},
+		"response" : "@link"
+	}
+
+]
+

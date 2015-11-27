@@ -1,0 +1,13 @@
+{
+    "name": "category",
+    "relation": [],
+    "description": "category description",
+    "data": [
+        {
+            "name": "name",
+            "description": " name",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

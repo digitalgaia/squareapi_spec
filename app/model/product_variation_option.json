@@ -18,19 +18,19 @@
             "name": "product_variation_id",
             "description": "variation id",
             "type": "integer",
-            "required": false
+            "required": true
         },
         {
             "name": "name",
             "description": "option name",
             "type": "string",
-            "required": false
+            "required": true
         },
         {
             "name": "quantity",
             "description": "quantity left",
             "type": "integer",
-            "required": false
+            "required": true
         }
     ]
 }

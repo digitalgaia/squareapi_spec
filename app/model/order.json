@@ -1,0 +1,55 @@
+{
+    "name": "order",
+    "relation": [],
+    "description": "order description",
+    "data": [
+        {
+            "name": "id order",
+            "description": " order id unique",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "customer",
+            "description": " order customer",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "date",
+            "description": " order date",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "status",
+            "description": " order status",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "total",
+            "description": "order total ",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "tracking number",
+            "description": "order tracking number ",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "payment",
+            "description": "order payment",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "action",
+            "description": "order action",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

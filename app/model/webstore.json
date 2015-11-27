@@ -1,0 +1,43 @@
+{
+    "name": "webstore",
+    "relation": [],
+    "description": "web store description",
+    "data": [
+        {
+            "name": "url",
+            "description": "web store url",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "cover photo",
+            "description": "web store cover photo",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "style",
+            "description": "web store style",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "infinite",
+            "description": "web store infinite or pagination",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "profile picture",
+            "description": "web store profile picture",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "logo",
+            "description": "web store logo",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

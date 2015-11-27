@@ -1,0 +1,25 @@
+{
+    "name": "payment_bank",
+    "relation": [],
+    "description": "payment description",
+    "data": [
+        {
+            "name": "bank",
+            "description": "type of payment bank",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "account number",
+            "description": "payment account number",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "payment account name",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

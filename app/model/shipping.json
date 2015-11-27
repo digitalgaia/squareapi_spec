@@ -1,0 +1,31 @@
+{
+    "name": "shipping",
+    "relation": [],
+    "description": "shipping description",
+    "data": [
+        {
+            "name": "flat rate",
+            "description": "flat rate shipping",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shipping table",
+            "description": "shipping table",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "range",
+            "description": "configure postcode range",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "edt",
+            "description": "edt",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

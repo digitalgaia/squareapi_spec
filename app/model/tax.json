@@ -1,0 +1,19 @@
+{
+    "name": "tax",
+    "relation": [],
+    "description": "tax description",
+    "data": [
+        {
+            "name": "name",
+            "description": "tax name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value",
+            "description": "tax value",
+            "type": "integer",
+            "required": true
+        }
+    ]
+}

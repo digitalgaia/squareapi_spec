@@ -1,0 +1,61 @@
+{
+    "name": "shop",
+    "relation": [],
+    "description": "shop description",
+    "data": [
+        {
+            "name": "name",
+            "description": "shop name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "description",
+            "description": "shop description",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "about us",
+            "description": "shop about",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "term",
+            "description": "shop term",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "email",
+            "description": "shop email",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "phone number",
+            "description": "shop phone number",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "company register no",
+            "description": "company register no",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "address",
+            "description": "shop address",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "",
+            "description": "",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

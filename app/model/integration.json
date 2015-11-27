@@ -1,0 +1,19 @@
+{
+    "name": "integration",
+    "relation": [],
+    "description": "integration description",
+    "data": [
+        {
+            "name": "location",
+            "description": "intergration location",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "",
+            "description": "",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

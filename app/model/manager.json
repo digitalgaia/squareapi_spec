@@ -1,0 +1,13 @@
+{
+    "name": "manager",
+    "relation": [],
+    "description": "manager description",
+    "data": [
+        {
+            "name": "add",
+            "description": "add manager",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

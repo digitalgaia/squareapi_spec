@@ -8,6 +8,10 @@
         {
             "model": "product_variation",
             "type": "one-to-one"
+        },
+        {
+            "model": "tax",
+            "type": "one-to-one"
         }
     ],
     "description": "Product information",

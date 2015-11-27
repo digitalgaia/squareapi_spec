@@ -1,0 +1,42 @@
+
+[
+	{
+		"path": "GET /shop/:shop-id/category",
+		"description": "return list of category",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@category"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/category",
+		"description": "create category",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : "@category"
+	},
+	{
+		"path": "PUT /shop/:shop-id/category/:categoryId",
+		"description": "update category",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+		"path": "DELETE /shop/:shop-id/category/:categoryId",
+		"description": "delete category",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	}
+]
+

@@ -1,0 +1,13 @@
+{
+    "name": "",
+    "relation": [],
+    "description": "",
+    "data": [
+        {
+            "name": "",
+            "description": "",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

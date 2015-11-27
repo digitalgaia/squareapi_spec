@@ -1,0 +1,19 @@
+{
+    "name": "variation",
+    "relation": [],
+    "description": "variation descritption",
+    "data": [
+        {
+            "name": "name",
+            "description": "variation name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "option ",
+            "description": "variation number of option",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

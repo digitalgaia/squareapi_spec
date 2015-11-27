@@ -1,66 +1,68 @@
 [
 	{
-		"path": "GET /manage/product",
-		"description": "return list of product",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "array:@product"
-	},
-	{
-		"path" : "GET /manage/product/:productId",
+		"path" : "GET /shop/:shop-id/product/:productId",
 		"description" : "get product detail",
 		"parameters" : {
 			"required" : [],
 			"optional" : ["fields"]
 		},
-		"response" : "@product"
+		"response" : "array:@product"
 	},
+
 	{
-		"path": "POST /manage/product",
+		"path": "POST /shop/:shop-id/product",
 		"description": "create product",
 		"parameters" : {
 			"required" : ["name"],
 			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
-		},
+			},
 		"response" : "@product"
 	},
+
 	{
-		"path": "PUT /manage/product/:productId",
+		"path": "PUT /shop/:shop-id/product/:productId",
 		"description": "update product",
 		"parameters" : {
 			"required" : ["name"],
 			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
-		},
+			},
 		"response" : ""
 	},
+
 	{
-	"path": "DELETE /manage/product/:productId",
+	"path": "DELETE /shop/:shop-id/product/:productId",
 		"description": "delete product",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
-		},
+			},
 		"response" : ""
 	},
+
 	{
-		"path": "GET /manage/product/variation",
+		"path": "GET /shop/:shop-id/product/variation",
 		"description": "get product variation and option",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
-		},
-		"response" : "@product_variation"
+			},
+		"response" : "@variation"
 	},
+
 	{
-		"path": "POST /manage/product/variation",
+		"path": "POST /shop/:shop-id/product/variation",
 		"description": "assign variation to this product",
 		"parameters": {
 			"required" : ["@variation:variation_id"],
 			"optional" : []
-		},
-		"response" : ""
+			},
+		"response" : {
+			"product" : {
+				"description" : [],
+				"type" :[]
+				}
+		}
 	}
+
 ]
 

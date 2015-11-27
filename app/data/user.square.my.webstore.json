@@ -1,0 +1,62 @@
+[
+	{
+		"path": "GET /shop/:shop-id/webstore",
+		"description": "get webstore url",
+		"parameters" : {
+			"required" : ["url"],
+			"optional" : []
+		},
+		"response" : "@webstore"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/webstore/cover_photo/:cover_photoId",
+		"description": "get cover photo",
+		"parameters" : {
+			"required" : ["cover photo"],
+			"optional" : []
+		},
+		"response" : "@webstore"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/webstore/style/:styleId",
+		"description": "update style ",
+		"parameters" : {
+			"required" : ["style"],
+			"optional" : []
+		},
+		"response" :""
+	},
+	
+	{
+		"path": "PUT /shop/:shop-id/webstore/infinite_scrolling/:infinite_scrollingId",
+		"description": "update infinate or pagination",
+		"parameters" : {
+			"required" : ["infinate or pagination"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+  
+	{
+		"path": "GET /shop/:shop-id/webstore/profile_picture/:profile_pictureId",
+		"description": "get profile picture",
+		"parameters" : {
+			"required" : ["profle picture"],
+			"optional" : []
+		},
+		"response" : "@webstore"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/webstore/logo/:logoId",
+		"description": "get logo",
+		"parameters" : {
+			"required" : ["logo"],
+			"optional" : []
+		},
+		"response" : "@webstore"
+	}
+]
+

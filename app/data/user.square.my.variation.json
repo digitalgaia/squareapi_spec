@@ -1,0 +1,41 @@
+[
+	{
+		"path": "GET /shop/:shop-id/variation",
+		"description": "return list of variation",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@variation"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/variation/:variationId",
+		"description": "update variation",
+		"parameters" : {
+			"required" : ["variation_name"],
+			"optional" : ["for","options"]
+		},
+		"response" : ""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/variation/assign/:assignId",
+		"description": "update assign to variation",
+		"parameters" : {
+			"required" : ["product"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+	"path": "DELETE /shop/:shop-id/variation/:variationId",
+		"description": "delete variation",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	}
+]

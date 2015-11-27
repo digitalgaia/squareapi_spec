@@ -1,0 +1,51 @@
+[
+	{
+		"path": "GET /shop/:shop-id/tax",
+		"description": "return tax of product",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@tax"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/tax",
+		"description": "add new tax",
+		"parameters" : {
+			"required" : ["name","value"],
+			"optional" : []
+		},
+		"response" :"@tax"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/:taxId",
+		"description": "update tax",
+		"parameters" : {
+			"required" : ["name","value"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+		"path" : "GET /shop/:shop-id/:taxId",
+		"description" : "get tax detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@tax"
+	},
+
+	{
+		"path": "DELETE /shop/:shop-id/:taxId",
+		"description": "delete tax",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	}
+]

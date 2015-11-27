@@ -1,0 +1,82 @@
+[
+	{
+		"path": "POST /shop/:shop-id/info/name",
+		"description": "create name",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/description",
+		"description": "create description",
+		"parameters" : {
+			"required" : ["description"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/about_us",
+		"description": "create about us",
+		"parameters" : {
+			"required" : ["about_us"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/terms",
+		"description": "create terms",
+		"parameters" : {
+			"required" : ["terms"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id//info/shop_email",
+		"description": "create shop shop_email",
+		"parameters" : {
+			"required" : ["shop_email"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/phone_number",
+		"description": "create shop phone_number",
+		"parameters" : {
+			"required" : ["phone_number"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/company_reg_no",
+		"description": "create company reg no",
+		"parameters" : {
+			"required" : ["company_reg_no"],
+			"optional" : []
+			},
+		"response" : "@info"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/info/address",
+		"description": "create address",
+		"parameters" : {
+			"required" : ["address"],
+			"optional" : []
+			},
+		"response" : "@info"
+	}
+]
+

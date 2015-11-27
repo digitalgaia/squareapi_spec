@@ -1,0 +1,44 @@
+[
+
+	{
+		"path": "GET /shop/:shop-id/manager",
+		"description": "return list of manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" :  "@manager"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/manager",
+		"description": "add new manager",
+		"parameters" : {
+			"required" : ["name","email"],
+			"optional" : []
+		},
+		"response" : "@manager"
+	},
+
+	{
+		"path": "DELETE /shop/:shop-id/manager/:managerId",
+		"description": "delete manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+		"path": "POST /shop/:shop-id/:managerId/upgrade",
+		"description": "upgrade manager",
+		"parameters" : {
+			"required" : ["name","email"],
+			"optional" : []
+		},
+		"response" : "@manager"
+	}
+]
+
+

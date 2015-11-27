@@ -1,16 +1,21 @@
 {
-	"manage" : [
+	"user.square.my" : [
 		"", 
-		"config", 
-		"config.checkout.payment_method",
-		"config.checkout.shipping_detail",
-		"promotion.coupon",
+		"info", 
+		"invoice",
 		"manager",
-		"product",
-		"variation",
+		"currency",
+		"shipping",
+		"promotion",
+		"webstore",
+		"integration",
+		"payment", 
 		"category",
-		"tax", 
-		"order"],
+		"product",
+		"tax",
+		"variation",
+		"order",
+		"link"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]
 }

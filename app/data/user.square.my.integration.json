@@ -1,0 +1,33 @@
+[
+
+	{
+		"path": "PUT /shop/:shop-id/integration/product_link/facebook/:facebookId",
+		"description": "choose all products post to facebook or web store",
+		"parameters" : {
+			"required" : ["location"],
+			"optional" : []
+		},
+		"response" : "@integration"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/integration/post_product/blogspot/:blogspotId",
+		"description": "choose all products post to blogspot",
+		"parameters" : {
+			"required" : ["location"],
+			"optional" : []
+		},
+		"response" : "@integration"
+	
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/integration/post_product/facebook/:facebookId",
+		"description": "choose all products post to facebook photo album & wall ",
+		"parameters" : {
+			"required" : ["location"],
+			"optional" : []
+		},
+		"response" : "@integration"
+	}
+]

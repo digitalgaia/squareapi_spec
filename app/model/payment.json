@@ -1,0 +1,31 @@
+{
+    "name": "payment",
+    "relation": [],
+    "description": "payment description",
+    "data": [
+        {
+            "name": "currency",
+            "description": "currency payment type ",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "paypal method",
+            "description": "paypal payment method",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "molpay method",
+            "description": "molpay payment method ",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "manual method",
+            "description": "manual payment method",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

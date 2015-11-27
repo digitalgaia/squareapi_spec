@@ -1,0 +1,25 @@
+{
+    "name": "link",
+    "relation": [],
+    "description": "link description",
+    "data": [
+        {
+            "name": "instagram",
+            "description": "instagram link",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "twitter",
+            "description": "twitter link",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "google analytic account id",
+            "description": "Google Analytic Account ID link",
+            "type": "string",
+            "required": false
+        }
+    ]
+}
