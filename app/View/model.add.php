@@ -2,13 +2,13 @@
 	
 var model = new function()
 {
-	this.addData = function()
+	this.addField = function()
 	{
 		var row = $($(".data-row")[0]).clone();
 		row.find('input, textarea').val('');
 		row.find('select').val('string');
 
-		$("#data-table").append(row);
+		$("#data-table-body").append(row);
 	}
 
 	this.addRelation = function()
@@ -17,6 +17,12 @@ var model = new function()
 		row.find('select').val('');
 
 		$("#relation-container").append(row);
+	}
+
+	this.deleteField = function(a)
+	{
+		if($('.data-row').length > 1)
+			$(a).parent().parent().remove();
 	}
 }
 
@@ -61,8 +67,10 @@ var model = new function()
 								<th style="width: 100px;">Name</th>
 								<th>Description</th>
 								<th style="width: 100px;">Type</th>
-								<th><a href='javascript:model.addData();'>+</a></th>
+								<th><a href='javascript:model.addField();'>+</a></th>
+								<th></th>
 							</tr>
+							<tbody id='data-table-body'>
 							<tr class="data-row">
 								<td><?php echo $exe->form->text('data[name][]');?></td>
 								<td><?php echo $exe->form->textarea('data[description][]', 'style="width: 100%;"');?></td>
@@ -70,7 +78,9 @@ var model = new function()
 									<?php echo $exe->form->select('data[type][]');?>
 								</td>
 								<td><input type='checkbox' name='data[required][]' /></td>
+								<td><a href='javascript:void(0);' onclick='model.deleteField(this);'>x</a></td>
 							</tr>
+							</tbody>
 						</table>
 					</td>
 				</tr>
@@ -81,3 +91,8 @@ var model = new function()
 		</div>
 	</div>
 </form>
+<script type="text/javascript">
+$("#data-table-body").sortable({
+	handle: '.data-row'
+});
+</script>

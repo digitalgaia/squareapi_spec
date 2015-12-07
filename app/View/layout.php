@@ -12,6 +12,8 @@
 
 		<!-- Bootstrap CSS -->
 		<?php echo $exe->asset->css('css/bootstrap.min.css');?>
+		<?php echo $exe->asset->js('js/Sortable.min.js');?>
+		<?php echo $exe->asset->js('js/jquery.binding.js');?>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
