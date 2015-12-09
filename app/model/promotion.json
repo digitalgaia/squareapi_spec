@@ -1,42 +1,101 @@
 {
     "name": "promotion",
-    "relation": [],
-    "description": "promotion description",
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "promotion information",
     "data": [
         {
-            "name": "name",
+            "name": "coupon_id",
+            "description": "coupon id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shop_id",
+            "description": "shop id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_name",
             "description": "coupon name",
             "type": "string",
             "required": true
         },
         {
-            "name": "code",
+            "name": "coupon type",
+            "description": "coupon type",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_amount",
+            "description": "coupon amount",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_minpurchase",
+            "description": "minimum of purchase",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_ongoing",
+            "description": "coupon ongoing",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_start",
+            "description": "coupon start",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "coupon_expire",
+            "description": "coupon expire",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "coupon_enabled",
+            "description": "coupon enabled",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_code",
             "description": "coupon code",
             "type": "string",
             "required": true
         },
         {
-            "name": "type",
-            "description": "coupon type",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "amount",
-            "description": "coupon amount",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "quantity",
+            "name": "coupon_quantity",
             "description": "coupon quantity",
-            "type": "string",
+            "type": "integer",
             "required": true
         },
         {
-            "name": "purchase",
-            "description": "minimum of purchase",
-            "type": "string",
+            "name": "coupon_used",
+            "description": "coupon used",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_apply_to",
+            "description": "coupon_apply_to",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coupon_status",
+            "description": "coupon_status",
+            "type": "integer",
             "required": true
         }
     ]

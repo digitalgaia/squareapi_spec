@@ -14,8 +14,7 @@
 		"product",
 		"tax",
 		"variation",
-		"order",
-		"link"],
+		"order"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]
 }

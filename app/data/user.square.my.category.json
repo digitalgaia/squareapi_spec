@@ -1,6 +1,16 @@
 
 [
 	{
+		"path": "POST /shop/:shop-id/category",
+		"description": "create category",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : "@category"
+	},
+
+	{
 		"path": "GET /shop/:shop-id/category",
 		"description": "return list of category",
 		"parameters" : {
@@ -10,15 +20,6 @@
 		"response" : "@category"
 	},
 
-	{
-		"path": "POST /shop/:shop-id/category",
-		"description": "create category",
-		"parameters" : {
-			"required" : ["name"],
-			"optional" : []
-		},
-		"response" : "@category"
-	},
 	{
 		"path": "PUT /shop/:shop-id/category/:categoryId",
 		"description": "update category",

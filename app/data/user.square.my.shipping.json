@@ -1,17 +1,6 @@
 [
-
 	{
-		"path": "GET /shop/:shop-id/shipping/method",
-		"description": "list of shipping",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "array:@shipping"
-	},
-
-	{
-		"path": "POST /shop/:shop-id/shipping/method",
+		"path": "POST /shop/:shop-id/shipping",
 		"description": "choose shipping method",
 		"parameters" : {
 			"required" : ["method"],
@@ -19,55 +8,15 @@
 		},
 		"response" : "@shipping"
 	},
-	
-	{
-		"path": "PUT /shop/:shop-id/shipping/method/flat_rate/option",
-		"description": "update flat rate option",
-		"parameters" : {
-			"required" : ["option"],
-			"optional" : []
-		},
-		"response" : ""
-	},
 
 	{
-		"path": "PUT /shop/:shop-id/shipping/method/shipping_table/default_rate",
-		"description": "update default rate",
-		"parameters" : {
-			"required" : ["rate"],
-			"optional" : []
-		},
-		"response" :""
-	},
-
-	{
-		"path": "POST /shop/:shop-id/shipping/method/shipping_table/range",
+		"path": "POST /shop/:shop-id/shipping/table/range",
 		"description": "add range",
 		"parameters" : {
-			"required" : ["postcode_start","postcode_end","rate","country"],
+			"required" : ["postcode_start","postcode_end","rate","coutry"],
 			"optional" : []
 		},
 		"response" : "@shipping"
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/shipping/method/shipping_table/range/:id",
-		"description": "update range",
-		"parameters" : {
-			"required" : ["postcode_start","postcode_end","rate"],
-			"optional" : []
-		},
-		"response" : "@shipping"
-	},
-
-	{
-	"path": "DELETE /shop/:shop-id/shipping/method/shipping_table/range/:id",
-		"description": "delete range",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : ""
 	},
 
 	{
@@ -78,7 +27,56 @@
 			"optional" : []
 			},
 		"response" : "@shipping"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/shipping",
+		"description": "list of shipping",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@shipping"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/shipping/flat_rate",
+		"description": "update flat rate option",
+		"parameters" : {
+			"required" : ["option"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/shipping/table/default_rate",
+		"description": "update default rate",
+		"parameters" : {
+			"required" : ["rate"],
+			"optional" : []
+		},
+		"response" : ""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/shipping/table/range/:id",
+		"description": "update range",
+		"parameters" : {
+			"required" : ["postcode_start","postcode_end","rate"],
+			"optional" : []
+		},
+		"response" : "@shipping"
+	},
+
+	{
+		"path": "DELETE /shop/:shop-id/shipping/table/range/:id",
+		"description": "delete range",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
 	}
-
-
 ]
+

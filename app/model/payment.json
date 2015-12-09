@@ -1,8 +1,19 @@
 {
     "name": "payment",
-    "relation": [],
-    "description": "payment description",
+    "relation": [
+        {
+            "model": "payment_bank",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "payment information",
     "data": [
+        {
+            "name": "id",
+            "description": "currency id",
+            "type": "integer",
+            "required": true
+        },
         {
             "name": "currency",
             "description": "currency payment type ",
@@ -10,22 +21,46 @@
             "required": true
         },
         {
-            "name": "paypal method",
-            "description": "paypal payment method",
+            "name": "molpay_id",
+            "description": "molpay id",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "molpay_code",
+            "description": "molpay code",
             "type": "integer",
-            "required": false
+            "required": true
+        },
+        {
+            "name": "molpay_enabled",
+            "description": "molpay enabled",
+            "type": "string",
+            "required": true
         },
         {
             "name": "molpay method",
             "description": "molpay payment method ",
             "type": "integer",
-            "required": false
+            "required": true
+        },
+        {
+            "name": "paypal method",
+            "description": "paypal payment method",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "paypal_email",
+            "description": "paypal_email",
+            "type": "string",
+            "required": true
         },
         {
             "name": "manual method",
             "description": "manual payment method",
             "type": "string",
-            "required": false
+            "required": true
         }
     ]
 }

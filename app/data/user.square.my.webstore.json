@@ -1,16 +1,16 @@
 [
 	{
-		"path": "GET /shop/:shop-id/webstore",
-		"description": "get webstore url",
+		"path": "GET /shop/:shop-id/webstore/logo",
+		"description": "get logo",
 		"parameters" : {
-			"required" : ["url"],
+			"required" : ["logo"],
 			"optional" : []
 		},
 		"response" : "@webstore"
 	},
-
+	
 	{
-		"path": "GET /shop/:shop-id/webstore/cover_photo/:cover_photoId",
+		"path": "GET /shop/:shop-id/webstore/cover_photo",
 		"description": "get cover photo",
 		"parameters" : {
 			"required" : ["cover photo"],
@@ -20,27 +20,7 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/webstore/style/:styleId",
-		"description": "update style ",
-		"parameters" : {
-			"required" : ["style"],
-			"optional" : []
-		},
-		"response" :""
-	},
-	
-	{
-		"path": "PUT /shop/:shop-id/webstore/infinite_scrolling/:infinite_scrollingId",
-		"description": "update infinate or pagination",
-		"parameters" : {
-			"required" : ["infinate or pagination"],
-			"optional" : []
-		},
-		"response" : ""
-	},
-  
-	{
-		"path": "GET /shop/:shop-id/webstore/profile_picture/:profile_pictureId",
+		"path": "GET /shop/:shop-id/webstore/profile_picture",
 		"description": "get profile picture",
 		"parameters" : {
 			"required" : ["profle picture"],
@@ -50,13 +30,63 @@
 	},
 
 	{
-		"path": "GET /shop/:shop-id/webstore/logo/:logoId",
-		"description": "get logo",
+		"path": "GET /shop/:shop-id/webstore/infinite_scrolling",
+		"description": "get infinate or pagination",
+		"parameters" : {
+			"required" : ["profle picture"],
+			"optional" : []
+		},
+		"response" : "@webstore"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/webstore/logo",
+		"description": "update logo",
 		"parameters" : {
 			"required" : ["logo"],
 			"optional" : []
 		},
-		"response" : "@webstore"
+		"response" :""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/webstore/logo",
+		"description": "update cover photo ",
+		"parameters" : {
+			"required" : ["logo"],
+			"optional" : []
+		},
+		"response" :""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/webstore/profile_picture",
+		"description": "update profile picture",
+		"parameters" : {
+			"required" : ["logo"],
+			"optional" : []
+		},
+		"response" :""
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/webstore/style",
+		"description": "update style ",
+		"parameters" : {
+			"required" : ["style"],
+			"optional" : []
+		},
+		"response" :""
+	},
+	
+	{
+		"path": "PUT /shop/:shop-id/webstore/infinite_scrolling",
+		"description": "update infinate or pagination",
+		"parameters" : {
+			"required" : ["infinate or pagination"],
+			"optional" : []
+		},
+		"response" : ""
 	}
 ]
 

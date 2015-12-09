@@ -1,11 +1,28 @@
 {
     "name": "category",
-    "relation": [],
+    "relation": [
+        {
+            "model": "product",
+            "type": "one-to-many"
+        }
+    ],
     "description": "category description",
     "data": [
         {
+            "name": "category_id",
+            "description": "category id",
+            "type": "integer",
+            "required": true
+        },
+        {
             "name": "name",
-            "description": " name",
+            "description": "name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "image",
+            "description": "image",
             "type": "string",
             "required": true
         }

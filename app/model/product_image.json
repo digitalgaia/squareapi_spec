@@ -9,8 +9,8 @@
     "description": "Product images",
     "data": [
         {
-            "name": "id",
-            "description": "unique product image id",
+            "name": "product_image_id",
+            "description": "product image id",
             "type": "integer",
             "required": true
         },
@@ -18,12 +18,18 @@
             "name": "product_id",
             "description": "product id",
             "type": "integer",
-            "required": false
+            "required": true
         },
         {
             "name": "src",
             "description": "absolute image path",
             "type": "string",
+            "required": true
+        },
+        {
+            "name": "filename",
+            "description": "image filename ",
+            "type": "integer",
             "required": false
         }
     ]

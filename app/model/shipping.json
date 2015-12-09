@@ -4,28 +4,46 @@
     "description": "shipping description",
     "data": [
         {
-            "name": "flat rate",
-            "description": "flat rate shipping",
+            "name": "shipping_id",
+            "description": "shipping id",
             "type": "integer",
-            "required": true
-        },
-        {
-            "name": "shipping table",
-            "description": "shipping table",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "range",
-            "description": "configure postcode range",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "edt",
-            "description": "edt",
-            "type": "string",
             "required": false
+        },
+        {
+            "name": "shipping_method",
+            "description": "shipping method",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "flat_rate_option",
+            "description": "flat rate option",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "flat_rate_general_rate",
+            "description": "flat rate general rate",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shipping_postcode_default",
+            "description": "shipping postcode default",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shipping_postcode_option",
+            "description": "shipping postcode option",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "estimated_delivery_time",
+            "description": "edt",
+            "type": "integer",
+            "required": true
         }
     ]
 }

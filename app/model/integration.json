@@ -4,14 +4,14 @@
     "description": "integration description",
     "data": [
         {
-            "name": "location",
-            "description": "intergration location",
+            "name": "product_permalink_destination",
+            "description": "product permalink destination",
             "type": "string",
             "required": true
         },
         {
-            "name": "",
-            "description": "",
+            "name": "comment",
+            "description": "comment",
             "type": "string",
             "required": false
         }

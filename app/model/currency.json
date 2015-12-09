@@ -1,0 +1,36 @@
+{
+    "name": "currency",
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-many"
+        }
+    ],
+    "description": "currency description",
+    "data": [
+        {
+            "name": "currency_id",
+            "description": "currency id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "title",
+            "description": "type of currency",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "code",
+            "description": "code currency",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "symbol",
+            "description": "symbol currency",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

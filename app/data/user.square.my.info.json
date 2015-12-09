@@ -20,7 +20,7 @@
 	},
 
 	{
-		"path": "POST /shop/:shop-id/info/about_us",
+		"path": "POST /shop/:shop-id/about_us",
 		"description": "create about us",
 		"parameters" : {
 			"required" : ["about_us"],
@@ -36,7 +36,7 @@
 			"required" : ["terms"],
 			"optional" : []
 			},
-		"response" : "@info"
+		"response" : "@shop"
 	},
 
 	{
@@ -46,7 +46,7 @@
 			"required" : ["shop_email"],
 			"optional" : []
 			},
-		"response" : "@info"
+		"response" : "@shop"
 	},
 
 	{
@@ -56,7 +56,7 @@
 			"required" : ["phone_number"],
 			"optional" : []
 			},
-		"response" : "@info"
+		"response" : "@shop"
 	},
 
 	{
@@ -66,17 +66,50 @@
 			"required" : ["company_reg_no"],
 			"optional" : []
 			},
-		"response" : "@info"
+		"response" : "@shop"
 	},
 
 	{
 		"path": "POST /shop/:shop-id/info/address",
 		"description": "create address",
 		"parameters" : {
-			"required" : ["address"],
+			"required" : ["country,state,postcode"],
 			"optional" : []
 			},
-		"response" : "@info"
+		"response" : "@shop"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/twitter",
+		"description": "create link to twitter URL",
+		"parameters" : {
+			"required" : ["twitter URL"],
+			"optional" : []
+			},
+		"response" : "@shop"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/instagram",
+		"description": "create link to instagram URL",
+		"parameters" : {
+			"required" : ["instagram URL"],
+			"optional" : []
+			},
+		"response" : "@shop"
+	}, 
+
+	{
+		"path": "POST /shop/:shop-id/google_account_id",
+		"description": "create link to Google Analytic Account ID",
+		"parameters" : {
+			"required" : ["Google Analytic Account ID"],
+			"optional" : []
+			},
+		"response" : "@shop"
 	}
+
+	
+
 ]
 

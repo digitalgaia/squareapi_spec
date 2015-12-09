@@ -4,38 +4,38 @@
     "description": "web store description",
     "data": [
         {
-            "name": "url",
-            "description": "web store url",
+            "name": "webstore_id",
+            "description": "webstore id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shop_id",
+            "description": "shop id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "coverphoto_enabled",
+            "description": "coverphoto enabled",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "pagination_enabled",
+            "description": "pagination_enabled",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "css_style",
+            "description": "css style",
             "type": "string",
             "required": true
         },
         {
-            "name": "cover photo",
-            "description": "web store cover photo",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "style",
-            "description": "web store style",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "infinite",
-            "description": "web store infinite or pagination",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "profile picture",
-            "description": "web store profile picture",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "logo",
-            "description": "web store logo",
+            "name": "webstore_logo",
+            "description": "webstore logo",
             "type": "string",
             "required": true
         }

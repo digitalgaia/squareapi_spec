@@ -1,25 +1,36 @@
 {
     "name": "payment_bank",
-    "relation": [],
-    "description": "payment description",
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "payment information",
     "data": [
         {
-            "name": "bank",
-            "description": "type of payment bank",
+            "name": "shop_bank_id",
+            "description": "shop bank id",
             "type": "string",
             "required": true
         },
         {
-            "name": "account number",
-            "description": "payment account number",
+            "name": "shop_id",
+            "description": "shop id",
             "type": "string",
-            "required": false
+            "required": true
         },
         {
-            "name": "name",
-            "description": "payment account name",
+            "name": "bank_name",
+            "description": "bank_name",
             "type": "string",
-            "required": false
+            "required": true
+        },
+        {
+            "name": "account_name",
+            "description": "account name",
+            "type": "string",
+            "required": true
         }
     ]
 }

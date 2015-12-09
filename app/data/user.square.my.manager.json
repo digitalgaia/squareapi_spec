@@ -1,6 +1,26 @@
 [
 
 	{
+		"path": "POST /shop/:shop-id/manager",
+		"description": "add new manager",
+		"parameters" : {
+			"required" : ["name","email"],
+			"optional" : []
+		},
+		"response" : "@manager"
+	},
+
+	{
+		"path": "POST /shop/:shop-id/:managerId/upgrade",
+		"description": "upgrade manager",
+		"parameters" : {
+			"required" : ["name","email"],
+			"optional" : []
+		},
+		"response" : "@manager"
+	},
+
+	{
 		"path": "GET /shop/:shop-id/manager",
 		"description": "return list of manager",
 		"parameters" : {
@@ -11,8 +31,8 @@
 	},
 
 	{
-		"path": "POST /shop/:shop-id/manager",
-		"description": "add new manager",
+		"path": "PUT /shop/:shop-id/:managerId/downgrade",
+		"description": "downgrade manager",
 		"parameters" : {
 			"required" : ["name","email"],
 			"optional" : []
@@ -28,17 +48,10 @@
 			"optional" : []
 		},
 		"response" : ""
-	},
-
-	{
-		"path": "POST /shop/:shop-id/:managerId/upgrade",
-		"description": "upgrade manager",
-		"parameters" : {
-			"required" : ["name","email"],
-			"optional" : []
-		},
-		"response" : "@manager"
 	}
+
+
+	
 ]
 
 

@@ -1,19 +1,42 @@
 {
     "name": "tax",
-    "relation": [],
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-one"
+        }
+    ],
     "description": "tax description",
     "data": [
         {
+            "name": "tax_id",
+            "description": "tax id",
+            "type": "integer",
+            "required": true
+        },
+        {
             "name": "name",
-            "description": "tax name",
+            "description": "name",
             "type": "string",
             "required": true
         },
         {
             "name": "value",
-            "description": "tax value",
+            "description": "value",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "status",
+            "description": "status",
             "type": "integer",
-            "required": true
+            "required": false
+        },
+        {
+            "name": "shop_id",
+            "description": "shop id",
+            "type": "integer",
+            "required": false
         }
     ]
 }

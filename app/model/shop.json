@@ -1,35 +1,40 @@
 {
     "name": "shop",
-    "relation": [],
+    "relation": [
+        {
+            "model": "currency",
+            "type": "one-to-one"
+        }
+    ],
     "description": "shop description",
     "data": [
         {
-            "name": "name",
+            "name": "shop_info",
+            "description": "shop info",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shop_id",
+            "description": "shop_id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shop_name",
             "description": "shop name",
             "type": "string",
             "required": true
         },
         {
-            "name": "description",
-            "description": "shop description",
+            "name": "shop_country",
+            "description": "shop country",
             "type": "string",
             "required": true
         },
         {
-            "name": "about us",
-            "description": "shop about",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "term",
-            "description": "shop term",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "email",
-            "description": "shop email",
+            "name": "shop_state",
+            "description": "shop state",
             "type": "string",
             "required": true
         },
@@ -40,21 +45,63 @@
             "required": true
         },
         {
-            "name": "company register no",
-            "description": "company register no",
+            "name": "phone_no",
+            "description": "phone no",
             "type": "string",
             "required": true
         },
         {
-            "name": "address",
-            "description": "shop address",
+            "name": "shop_postcode",
+            "description": "shop postcode",
             "type": "string",
             "required": true
         },
         {
-            "name": "",
-            "description": "",
+            "name": "description",
+            "description": "description",
             "type": "string",
+            "required": true
+        },
+        {
+            "name": "about_us",
+            "description": "abou tus",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "terms",
+            "description": "terms",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "url_instagram",
+            "description": "url instagram",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "url_twitter",
+            "description": "url twitter",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "analytic_id",
+            "description": "analytic id",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "company_reg_no",
+            "description": "company reg no",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "business_tax_id",
+            "description": "business tax id",
+            "type": "integer",
             "required": false
         }
     ]

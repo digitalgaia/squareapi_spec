@@ -4,8 +4,8 @@
     "description": "invoice description",
     "data": [
         {
-            "name": "logo",
-            "description": "choose invoice logo",
+            "name": "invoice_logo",
+            "description": "invoice logo",
             "type": "string",
             "required": true
         }

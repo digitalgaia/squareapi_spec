@@ -10,7 +10,7 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/variation/:variationId",
+		"path": "PUT /shop/:shop-id/variation",
 		"description": "update variation",
 		"parameters" : {
 			"required" : ["variation_name"],

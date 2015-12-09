@@ -1,5 +1,4 @@
 [
-
 	{
 		"path": "GET /shop/:shop-id/payment",
 		"description": "list of payment",
@@ -8,6 +7,26 @@
 			"optional" : []
 		},
 		"response" : "@payment"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/payment/manual",
+		"description": "list all manual payment",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@payment_bank"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/payment/manual",
+		"description": "update manual information",
+		"parameters" : {
+			"required" : ["bank","account_name","account_number"],
+			"optional" : []
+		},
+		"response" : "@payment_bank"
 	},
 
 	{
@@ -28,26 +47,6 @@
 			"optional" : ["admin","code"]
 		},
 		"response" : ""
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/payment/manual",
-		"description": "update manual information",
-		"parameters" : {
-			"required" : ["bank","account_name","account_number"],
-			"optional" : []
-		},
-		"response" : "@payment_bank"
-	},
-
-	{
-		"path": "GET /shop/:shop-id/payment/manual/:manualId",
-		"description": "list all manual payment",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "@payment_bank"
 	}
 ]
 

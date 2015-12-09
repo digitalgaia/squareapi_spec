@@ -1,20 +1,20 @@
 [
 	{
-		"path": "GET /shop/:shop-id/promotion/coupon",
-		"description": "return list of coupon",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "@promotion"
-	},
-
-	{
 		"path": "POST /shop/:shop-id/promotion/coupon",
 		"description": "add new coupon",
 		"parameters" : {
 			"required" : ["name","code","type","amount","ongoing"],
 			"optional" : ["date_start","date_end","quantity","minimum_purchase"]
+		},
+		"response" : "@promotion"
+	},
+
+	{
+		"path": "GET /shop/:shop-id/promotion/coupon",
+		"description": "return list of coupon",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
 		},
 		"response" : "@promotion"
 	},
@@ -43,7 +43,7 @@
 		"path": "POST /shop/:shop-id/promotion/free_shipping",
 		"description": "Add price for free shipping",
 		"parameters" : {
-			"required" : [],
+			"required" : ["MYR"],
 			"optional" : []
 		},
 		"response" : ""

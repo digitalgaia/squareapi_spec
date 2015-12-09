@@ -10,18 +10,8 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/order/:orderId/tracking_number",
-		"description": "create tracking number",
-		"parameters" : {
-			"required" : ["tracking_number"],
-			"optional" : []
-		},
-		"response" : "array:@order"
-	},
-	
-	{
-		"path": "GET /shop/:shop-id/order/:orderId/tracking_number",
-		"description": "get tracking number",
+		"path": "GET /shop/:shop-id/orderId",
+		"description": "get order detail",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -30,18 +20,18 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/order/:orderId/status",
-		"description": "update status",
+		"path": "GET /shop/:shop-id/order/:orderId/tracking_number",
+		"description": "get tracking number",
 		"parameters" : {
-			"required" : ["status"],
+			"required" : [],
 			"optional" : []
 		},
 		"response" : "array:@order"
-	},
-	
+	}, 
+
 	{
 		"path": "GET /shop/:shop-id/order/:orderId/status",
-		"description": "get status",
+		"description": "get current status",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
@@ -70,6 +60,26 @@
 	},
 
 	{
+		"path": "PUT /shop/:shop-id/order/:orderId/tracking_number",
+		"description": "create tracking number",
+		"parameters" : {
+			"required" : ["tracking_number"],
+			"optional" : []
+		},
+		"response" : "array:@order"
+	},
+	
+	{
+		"path": "PUT /shop/:shop-id/order/:orderId/status",
+		"description": "update status",
+		"parameters" : {
+			"required" : ["status"],
+			"optional" : []
+		},
+		"response" : "array:@order"
+	},
+	
+	{
 		"path": "DELETE /shop/:shop-id/order/:orderId",
 		"description": "delete order",
 		"parameters" : {
@@ -80,4 +90,3 @@
 	}
 
 ]
-

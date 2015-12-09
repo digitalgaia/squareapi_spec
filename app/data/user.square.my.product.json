@@ -1,15 +1,5 @@
 [
 	{
-		"path" : "GET /shop/:shop-id/product/:productId",
-		"description" : "get product detail",
-		"parameters" : {
-			"required" : [],
-			"optional" : ["fields"]
-		},
-		"response" : "array:@product"
-	},
-
-	{
 		"path": "POST /shop/:shop-id/product",
 		"description": "create product",
 		"parameters" : {
@@ -17,6 +7,26 @@
 			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
 			},
 		"response" : "@product"
+	},
+
+	{
+		"path" : "GET /shop/:shop-id/product",
+		"description" : "list of product",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@product"
+	},
+
+	{
+		"path" : "GET /shop/:shop-id/product/:productId",
+		"description" : "get product detail",
+		"parameters" : {
+			"required" : ["limit"],
+			"optional" : []
+		},
+		"response" : "array:@product"
 	},
 
 	{
@@ -37,32 +47,6 @@
 			"optional" : []
 			},
 		"response" : ""
-	},
-
-	{
-		"path": "GET /shop/:shop-id/product/variation",
-		"description": "get product variation and option",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-			},
-		"response" : "@variation"
-	},
-
-	{
-		"path": "POST /shop/:shop-id/product/variation",
-		"description": "assign variation to this product",
-		"parameters": {
-			"required" : ["@variation:variation_id"],
-			"optional" : []
-			},
-		"response" : {
-			"product" : {
-				"description" : [],
-				"type" :[]
-				}
-		}
 	}
-
 ]
 

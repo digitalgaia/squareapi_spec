@@ -1,6 +1,6 @@
 [
 	{
-		"path": "GET /shop/:shop-id/currency/:currencyId",
+		"path": "GET /shop/:shop-id/currency",
 		"description": "get currency",
 		"parameters" : {
 			"required" : ["currency"],
@@ -19,4 +19,6 @@
 		"response" : "@payment"
 	}
 ]
+
+
 

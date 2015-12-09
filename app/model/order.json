@@ -1,6 +1,11 @@
 {
     "name": "order",
-    "relation": [],
+    "relation": [
+        {
+            "model": "product",
+            "type": "one-to-one"
+        }
+    ],
     "description": "order description",
     "data": [
         {

@@ -1,13 +1,4 @@
 [
-	{
-		"path": "GET /shop/:shop-id/tax",
-		"description": "return tax of product",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "@tax"
-	},
 
 	{
 		"path": "POST /shop/:shop-id/tax",
@@ -20,13 +11,13 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/:taxId",
-		"description": "update tax",
+		"path": "GET /shop/:shop-id/tax",
+		"description": "list of tax",
 		"parameters" : {
-			"required" : ["name","value"],
+			"required" : [],
 			"optional" : []
 		},
-		"response" : ""
+		"response" : "@tax"
 	},
 
 	{
@@ -37,6 +28,16 @@
 			"optional" : []
 		},
 		"response" : "@tax"
+	},
+
+	{
+		"path": "PUT /shop/:shop-id/:taxId",
+		"description": "update tax",
+		"parameters" : {
+			"required" : ["name","value"],
+			"optional" : []
+		},
+		"response" : ""
 	},
 
 	{

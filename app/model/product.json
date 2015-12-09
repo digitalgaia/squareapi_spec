@@ -12,33 +12,127 @@
         {
             "model": "tax",
             "type": "one-to-one"
+        },
+        {
+            "model": "category",
+            "type": "one-to-one"
         }
     ],
     "description": "Product information",
     "data": [
         {
-            "name": "id",
-            "description": "product primary id",
+            "name": "product_id",
+            "description": "product id",
             "type": "integer",
             "required": true
         },
         {
-            "name": "name",
-            "description": "Product name",
-            "type": "string",
+            "name": "shop_id",
+            "description": "shop id",
+            "type": "integer",
             "required": true
         },
         {
-            "name": "model",
-            "description": "product model or SKU",
-            "type": "string",
+            "name": "tax_id",
+            "description": "tax id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "has_inventory",
+            "description": "has inventory",
+            "type": "integer",
             "required": true
         },
         {
             "name": "quantity",
-            "description": "Product current quantity",
+            "description": "quantity",
             "type": "integer",
-            "required": false
+            "required": true
+        },
+        {
+            "name": "model",
+            "description": "model",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "image",
+            "description": "image",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "price",
+            "description": "price",
+            "type": "float",
+            "required": true
+        },
+        {
+            "name": "price_by_variation",
+            "description": "price by variation",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "date_added",
+            "description": "date added",
+            "type": "",
+            "required": true
+        },
+        {
+            "name": "last_modified",
+            "description": "last_modified",
+            "type": "",
+            "required": true
+        },
+        {
+            "name": "weight",
+            "description": "weight",
+            "type": "float",
+            "required": true
+        },
+        {
+            "name": "free_shipping",
+            "description": "free shipping",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "fixed_shipping",
+            "description": "fixed shipping",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "fixed_shipping_price",
+            "description": "fixed shipping price",
+            "type": "float",
+            "required": true
+        },
+        {
+            "name": "fan_discount",
+            "description": "fan discount",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "fan_discount_rate",
+            "description": "fan discount rate",
+            "type": "float",
+            "required": true
+        },
+        {
+            "name": "ordered",
+            "description": "ordered",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "status",
+            "description": "status",
+            "type": "integer",
+            "required": true
         }
     ]
 }
