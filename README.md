@@ -2,7 +2,7 @@
 Square API specification
 
 ### loading up on local
-- git clone https://github.com/digitalgai/squareapi_spec
+- git clone https://github.com/digitalgaia/squareapi_spec
 
 ### serve with PHP built-in server
 - cd into the project folder (squareapi_spec)
