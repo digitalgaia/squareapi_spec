@@ -15,3 +15,5 @@
 	<li>Every access to any user endpoints <b>must</b> be authenticated.</li>
 	<li>API design on user /shop endpoint looks modular rather than resourceful.</li>
 </ul>
+<h3>Authentication on user endpoint</h3>
+<p>Undecided</p>

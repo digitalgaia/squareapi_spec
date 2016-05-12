@@ -33,11 +33,12 @@ class Model
 			'string' => 'string',
 			'integer' => 'integer',
 			'float' => 'float',
-			'boolean' => 'boolean'));
+			'boolean' => 'boolean',
+			'datetime' => 'datetime'));
 
 		if($request->getMethod() == 'POST')
 		{
-			$post = $request->param();
+			$post = $request->getParsedBody();
 
 			/*if(in_array($post['name'], $modelList))
 			{
@@ -83,15 +84,13 @@ class Model
 			$post['data'] = $newDatas;
 			$data = $post;
 
-			$path = $path->create('model/'.$data['name'].'.json');
+			$path = $path['app']->create('model/'.$data['name'].'.json');
 
 			$data = json_encode($data, JSON_PRETTY_PRINT);
 
-
-
 			// save.
-			file_put_contents($path->toString(), $data);
-
+			file_put_contents((string) $path, $data);
+			
 			return $this->exe
 			->redirect
 			->flash('success', 'Updated!')

@@ -45,16 +45,16 @@ var model = new function()
 						<div class='row-relation'>
 						<?php echo $exe->form->select('relation[type][]', array(
 							'one-to-one' => 'Has one',
-							'one-to-many' => 'Has many'), null, $rel['type'], '[Type]');?>
-						<?php echo $exe->form->select('relation[model][]', $exe->modelList, null, $rel['model'], '[Model]');?> 
+							'one-to-many' => 'Has many'), $rel['type'], null, '[Type]');?>
+						<?php echo $exe->form->select('relation[model][]', $exe->modelList, $rel['model'], null, '[Model]');?> 
 						</div>
 						<?php endforeach;?>
 					<?php else:?>
 						<div class='row-relation'>
 						<?php echo $exe->form->select('relation[type][]', array(
 							'one-to-one' => 'Has one',
-							'one-to-many' => 'Has many'), null, $rel['type'], '[Type]');?>
-						<?php echo $exe->form->select('relation[model][]', $exe->modelList, null, $rel['model'], '[Model]');?> 
+							'one-to-many' => 'Has many'), $rel['type'], null, '[Type]');?>
+						<?php echo $exe->form->select('relation[model][]', $exe->modelList, $rel['model'], null, '[Model]');?> 
 					<?php endif;?>
 					</td>
 			</tr>
@@ -75,7 +75,7 @@ var model = new function()
 						<tbody id='data-table-body'>
 						<?php foreach($data as $row):?>
 						<tr class="data-row">
-							<td><?php echo $exe->form->text('data[name][]', null, $row['name']);?></td>
+							<td><?php echo $exe->form->text('data[name][]', $row['name']);?></td>
 							<td><?php echo $exe->form->textarea('data[description][]')->value($row['description'])->attr('style="width: 100%;"');?></td>
 							<td>
 								<?php echo $exe->form->select('data[type][]')->value($row['type']);?>

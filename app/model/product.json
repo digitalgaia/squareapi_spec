@@ -77,13 +77,13 @@
         {
             "name": "date_added",
             "description": "date added",
-            "type": "",
+            "type": "datetime",
             "required": true
         },
         {
             "name": "last_modified",
             "description": "last_modified",
-            "type": "",
+            "type": "datetime",
             "required": true
         },
         {
