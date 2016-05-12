@@ -12,7 +12,7 @@ class Model
 	{
 		$model = $this->exe->param('model');
 
-		$model = json_decode($this->exe->loader->getContents('model/'.$model.'.json'), true);
+		$model = json_decode($this->exe->path['app']->getContents('model/'.$model.'.json'), true);
 
 		return array(
 			'view' => 'model.view',
@@ -23,7 +23,7 @@ class Model
 	{
 		$model = $this->exe->param('model');
 
-		$model = json_decode($this->exe->loader->getContents('model/'.$model.'.json'), true);
+		$model = json_decode($this->exe->path['app']->getContents('model/'.$model.'.json'), true);
 
 		$request = $this->exe->request;
 		$path = $this->exe->path;
@@ -35,7 +35,7 @@ class Model
 			'float' => 'float',
 			'boolean' => 'boolean'));
 
-		if($request->isMethod('post'))
+		if($request->getMethod() == 'POST')
 		{
 			$post = $request->param();
 
@@ -121,9 +121,9 @@ class Model
 
 		$this->exe->form->set('data[type][]', 'string');
 
-		if($request->isMethod('post'))
+		if($request->getMethod() == 'POST')
 		{
-			$post = $request->param();
+			$post = $request->getParsedBody();
 
 			if(in_array($post['name'], $modelList))
 			{
@@ -169,17 +169,17 @@ class Model
 			$post['data'] = $newDatas;
 			$data = $post;
 
-			$path = $path->create('model/'.$data['name'].'.json');
+			$path = $path['app']->path('model/'.$data['name'].'.json');
 
 			$data = json_encode($data, JSON_PRETTY_PRINT);
 
 			// save.
-			file_put_contents($path->toString(), $data);
+			file_put_contents($path, $data);
 
 			return $this->exe
 			->redirect
-			->flash('success', 'Added new model!')
-			->refresh();
+			->flash('success', 'New model added!')
+			->route('view', array('model' => $post['name']));
 		}
 
 		return array(

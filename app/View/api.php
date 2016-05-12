@@ -44,18 +44,23 @@ $(document).ready(function()
 			<li class='module'><?php echo $module;?></li>
 			<?php foreach($submodules as $submodule):?>
 			<?php $selected = $exe->isRoute('@spec', array('path' => $module.'.'.$submodule)) ? 'active' : '';?>
-				<li class='submodule <?php echo $selected;?>'><a href='<?php echo $exe->url->create('spec', $submodule ? array('path' => $module.'.'.$submodule) : array());?>'><?php echo $submodule ? : '[base]';?></a></li>
+				<?php if(!$submodule) continue;?>
+				<li class='submodule <?php echo $selected;?>'>
+					<a href='<?php echo $exe->url->create('spec', $submodule ? array('path' => $module.'.'.$submodule) : array());?>'><?php echo $submodule ? : '[base]';?>
+					</a>
+				</li>
 			<?php endforeach;?>
 		<?php endforeach;?>
 	</ul>
 </div>
 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-	<h2 style="letter-spacing: 2px; border-bottom: 1px solid #dbdbdb; padding-bottom: 20px;">Square Api Specification</h2>
+<h2 style="letter-spacing: 2px; border-bottom: 1px solid #dbdbdb; padding-bottom: 20px;">Square Api Specification</h2>
 	<?php if($path == ''):?>
+		<?php echo $exe->view->create('api.index')->render();?>
 	<?php else:?>
 			<h3><b style="color: #b9b9b9;"><?php echo $path;?></b></h3>
 		<?php if(!$data):?>
-			<h3>The api isn't created yet.</h3>
+			<h3>The api specification isn't created yet.</h3>
 		<?php else:?>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -104,7 +109,7 @@ Object <a href='<?php echo $exe->url->create("@model.view", array("model"=>$mode
 									<?php $model = substr($response, 7);?>
 									<?php $url = $exe->url->create("@model.view", array('model' => $model));?>
 Status : 200
-Array of Object <a href="<?php echo $url;?>">@<?php echo $model;?></a>
+Collection of Object <a href="<?php echo $url;?>">@<?php echo $model;?></a>
 									<?php elseif($response != ''):?>
 Status : 200
 <?php echo $response;?>

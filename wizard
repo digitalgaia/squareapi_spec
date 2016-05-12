@@ -1,4 +1,4 @@
 <?php
-$exedra = require_once 'exedra';
+$app = require_once 'app/app.php';
 
-$exedra->wizard($argv);
+return $app->wizard($argv);

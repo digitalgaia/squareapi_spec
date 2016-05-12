@@ -28,13 +28,20 @@ h3
 	font-family: "courier new";
 }
 
+.wrap-code
+{
+	 background: black;
+	 color: white;
+	 tab-size: 4;
+}
+
 </style>
 <div class="row" style="margin-bottom: 100px;">
 	<div style="margin-left: auto; margin-right: auto;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h2>API Development rule of thumbs</h2>
-		<p>An itemized standards according to <a href='http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api' target="_blank">this article</a>.</p>
+		<p>A lot of things are still undecided. <a href='http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api' target="_blank">This article</a> <b>may</b> provides some guideline to proper api design. Lot of api design spec on API tab is undecided.</p>
 		<h3>1. Version</h3>
-		<p>Will be specified through <b>header</b>.</p>
+		<p>Will be specified through <b>header</b> or probably through uri <b>path</b> [undecided].</p>
 		<h3>2. Authentication</h3>
 		<p>- <b>access_token</b> is <a href='#'>required</a> on every request<br>
 		- Token can be generated through <a href='<?php echo $exe->url->create('@spec', array('path' => 'user.auth'));?>'>authentication API</a>
@@ -46,19 +53,37 @@ h3
 		<h3>4. Response</h3>
 		<table>
 			<tr>
-				<th>Format</th><td>JSON</td>
+				<th style="width: 150px;">Format</th><td>JSON</td>
 			</tr>
 			<tr>
-				<th style="padding-right: 10px;">Response Status</th><td>Follow HTTP status code standard</td>
+				<th>Format negotiable?</th><td>Not sure.</td>
 			</tr>
 		</table>
-		<h4>4.1. Error Response</h4>
-		<p>
-		HTTP Status code : <b>4XX</b><br>
-		Response body with return field : <b>message</b><br>
-		For response with multiple errors, return under field : <b>errors</b>
-		</p>
-		<h4>4.2. HTTP Status Code</h4>
+		<h4>4.1 Response envelope</h4>
+		<p>Whether to nicely envelop our response body or not is actually <b>still undecided</b>. However, below is what it may look like if we choose to envelop our response.</p>
+		<p>Every response whether it's a success or error must return 200. And every successful response should be enveloped with <b>data</b> key. Sample response :</p>
+		<pre class='wrap-code'><code>
+{
+	"data" : {
+		"name" : "Blue Clothes",
+		"image" : "http://img.square.my/product/12345.jpg",
+		"price" : "25.50"
+	}
+}
+		</code></pre>
+		<p>Error and exception should be enveloped with <b>error</b> key, with another additional key like <b>message</b>, <b>fields</b> (optional), and <b>code</b>.<br>Sample response :</p>
+		<pre class='wrap-code'><code>
+{
+	"error" : {
+		"message" : "Some field is missing.",
+		"code" : "101"
+	}
+}
+		</code></pre>
+		<p>There're actually another strict formats we can consider if we choose to envelop, <a href='http://jsonapi.org/format'>JSON API</a> for example.</p>
+		<h4>4.2 To not envelop</h4>
+		<p>The different is, the API user will deal directly with http standards. The same goes to the API developer (us). Below is usable status code on non enveloped response.</p>
+		<h4 style="font-size: 1.3em;">4.2.1 HTTP Status Code</h4>
 		<table class='http-status-table'>
 			<tr>
 				<td>200 OK</td><td>Used on every successful GET, POST, PUT, DELETE request.</td>
@@ -88,7 +113,13 @@ h3
 				<td>429 Too Many Requests</td><td>Rate limiting error</td>
 			</tr>
 		</table>
-		<h4>4.3 Response envelope</h4>
-		<p>To be used only on certain occasion.</p>
 	</div>
 </div>
+<script type="text/javascript">
+
+$('.wrap-code code').each(function()
+{
+	$(this).html($(this).html().trim());
+});
+
+</script>

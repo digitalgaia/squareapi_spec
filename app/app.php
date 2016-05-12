@@ -1,102 +1,134 @@
 <?php
-$exedra = require_once __DIR__.'/../exedra';
+require_once __DIR__.'/../vendor/autoload.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
+
 session_start();
-return $exedra->build(array('name' => 'app', 'namespace' => 'ApiDocs'), function($app)
+
+$app = new \Exedra\Application(__DIR__.'/../');
+
+if($app->path['app']->has('env.php'))
+	$app->config->set($app->path['app']->load('env.php'));
+
+$app->map->middleware(function($exe)
 {
-	if($app->loader->has('env.php'))
-		$app->config->set($app->loader->load('env.php'));
+	$exe->view->setDefaultData(array(
+		'exe' => $exe
+		));
 
-	$app->registry->addMiddleware(function($exe)
+	$exe->layout = $exe->view->create('layout');
+
+	try
 	{
-		$exe->view->setDefaultData(array(
-			'exe' => $exe
-			));
-
-		$exe->layout = $layout = $exe->view->create('layout');
-
 		return $exe->next($exe);
-	});
+	}
+	catch(\Exception $e)
+	{
+		return $exe->execute('@error', array('exception' => $e));
+	}
+});
 
-	$app->map->addRoutes(array(
-		'rule' => array(
-			'uri' => 'rule-of-thumbs',
-			'execute' => function($exe)
+$app->map->addRoutes(array(
+	'rule' => array(
+		'path' => '/rule-of-thumbs',
+		'execute' => function($exe)
+		{
+			return $exe->layout->set('view', $exe->view->create('rule'))->render();
+		}
+		),
+	'error' => array(
+		'path' => false,
+		'execute' => function($exe)
+		{
+			return $exe->layout
+			->set('view', $exe->view->create('404')
+				->set('exception', $exe->param('exception')))
+			->render();
+		}),
+	'model' => array(
+		'path' => '/model',
+		'middleware' => function($exe)
+		{
+			$path = $exe->path['app']->path('model');
+
+			$dir = opendir($path);
+
+			$models = array();
+
+			while(($file = readdir($dir)) !== false)
 			{
-				return $exe->layout->set('view', $exe->view->create('rule'));
+				if(strpos($file, '.json') === false)
+					continue;
+
+				$model = str_replace('.json', '', $file);
+				$models[$model] = $model;
 			}
-			),
-		'model' => array(
-			'uri' => 'model',
-			'middleware' => function($exe)
-			{
-				$path = $exe->path->create('model')->toString();
 
-				$dir = opendir($path);
+			$exe->modelList = $models;
 
-				$models = array();
-				while(($file = readdir($dir)) !== false)
+			$response = $exe->next($exe);
+
+			if(!is_array($response))
+				return $response;
+
+			return $exe->layout->set('view', $exe->view->create('model', array(
+				'models' => $models,
+				'view' => $response['view'],
+				'data' => $response['data']
+				)))->render();
+		},
+		'subroutes' => array(
+			'add' => array(
+				'path' => '/add',
+				'execute' => 'controller=model@add'
+				),
+			'view' => array(
+				'path' => '/[:model]',
+				'execute' => 'controller=model@view'
+				),
+			'delete'=> array(
+				'path' => '/delete/[:model]',
+				'execute' => function($exe)
 				{
-					if(strpos($file, '.json') === false)
-						continue;
+					$path = realpath($exe->path['app']->file('model/'.$exe->param('model').'.json'));
 
-					$model = str_replace('.json', '', $file);
-					$models[$model] = $model;
-				}
+					unlink($path);
 
-				$exe->modelList = $models;
-
-				$response = $exe->next($exe);
-
-				if(is_string($response))
-					return $response;
-
-				return $exe->layout->set('view', $exe->view->create('model', array(
-					'models' => $models,
-					'view' => $response['view'],
-					'data' => $response['data']
-					)))->render();
-			},
-			'subroutes' => array(
-				'add' => array(
-					'uri' => 'add',
-					'execute' => 'controller=model@add'
-					),
-				'view' => array(
-					'uri' => '[:model]',
-					'execute' => 'controller=model@view'
-					),
-				'edit' => array(
-					'uri' => 'edit/[:model]',
-					'execute' => 'controller=model@edit'
-					)
+					return $exe->redirect->flash('success', 'model ['.$exe->param('model').'] has been deleted.')->route('add');
+				}),
+			'edit' => array(
+				'path' => '/edit/[:model]',
+				'execute' => 'controller=model@edit'
 				)
 			)
-		));
+		)
+	));
 
-	$app->map->addRoutes(array(
-		'spec' => array(
-			'uri' => '[:path?]',
-			'execute' => function($exe)
+$app->map->addRoutes(array(
+	'spec' => array(
+		'path' => '/[:path?]',
+		'execute' => function($exe)
+			{
+				$api = json_decode($exe->path['app']->getContent('data/index.json'), true);
+
+				$path = $exe->param('path');
+
+				if($path)
 				{
-					$api = json_decode($exe->loader->getContent('data/index.json'), true);
-
-					$path = $exe->param('path');
-
-					if($path)
+					if($exe->path['app']->isExists($file = 'data/'.$path.'.json'))
 					{
-						if($exe->loader->has($file = 'data/'.$path.'.json'))
-							$data = json_decode($exe->loader->getContent($file), true);
+						$data = json_decode($exe->path['app']->getContents($file), true);
 					}
-
-					return $exe->layout
-					->set('view', $exe->view->create('api', array(
-						'apis' => $api,
-						'path' => $path,
-						'data' => $data
-						)))->render();
 				}
-			)
-		));
-});
+
+				return $exe->layout
+				->set('view', $exe->view->create('api', array(
+					'apis' => $api,
+					'path' => $path,
+					'data' => $data
+					)))->render();
+			}
+		)
+	));
+
+return $app;

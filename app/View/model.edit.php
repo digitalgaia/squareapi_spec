@@ -59,7 +59,7 @@ var model = new function()
 					</td>
 			</tr>
 			<tr>
-				<td>Description</td><td><?php echo $exe->form->textarea('description', 'style="width: 100%; height: 80px;"');?></td>
+				<td>Description</td><td><?php echo $exe->form->textarea('description')->attr('style="width: 100%; height: 80px;"');?></td>
 			</tr>
 			<tr>
 				<td>Fields</td>
@@ -76,9 +76,9 @@ var model = new function()
 						<?php foreach($data as $row):?>
 						<tr class="data-row">
 							<td><?php echo $exe->form->text('data[name][]', null, $row['name']);?></td>
-							<td><?php echo $exe->form->textarea('data[description][]', 'style="width: 100%;"', $row['description']);?></td>
+							<td><?php echo $exe->form->textarea('data[description][]')->value($row['description'])->attr('style="width: 100%;"');?></td>
 							<td>
-								<?php echo $exe->form->select('data[type][]', null, null, $row['type']);?>
+								<?php echo $exe->form->select('data[type][]')->value($row['type']);?>
 							</td>
 							<td><input type='checkbox' name='data[required][]' <?php if($row['required']):?>checked<?php endif;?> /></td>
 							<td><a href='javascript:void(0);' onclick="model.deleteField(this);">x</a></td>

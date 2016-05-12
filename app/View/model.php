@@ -19,5 +19,5 @@
 	<?php if($exe->flash->has('success')):?>
 		<div class='alert alert-success' style="margin-top: 5px;"><?php echo $exe->flash->get('success');?></div>
 	<?php endif;?>
-	<?php $exe->view->create($view, $data)->render();?>
+	<?php echo $exe->view->create($view, $data)->render();?>
 </div>

@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<?php $view->render();?>
+			<?php echo $view->render();?>
 		</div>
 		</div>
 	</body>

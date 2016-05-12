@@ -1,0 +1,1 @@
+php wizard serve -p 9000 -r router.php

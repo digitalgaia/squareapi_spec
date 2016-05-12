@@ -1,4 +1,6 @@
-<h3><?php echo $name;?> [<a href='<?php echo $exe->url->create('@model.edit', array('model' => $name));?>'>edit</a>]</h3>
+<h3><?php echo $name;?> [<a href='<?php echo $exe->url->create('@model.edit', array('model' => $name));?>'>edit</a>]
+<span class='pull-right'>[<a onclick="return confirm('Delete this model?');" href='<?php echo $exe->url->create('@model.delete', array('model' => $name));?>'>delete</a>]</span>
+</h3>
 <style type="text/css">
 	
 #data-table th

@@ -42,6 +42,7 @@ var model = new function()
 </style>
 <form action="" method="POST" role="form">
 	<legend><h3>Add new model</h3></legend>
+	<p>Model here basically mean the standard defined object or format to be returned by some of our endpoints. It is <b>not necessarily</b> a database table or our domain entities.</p>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<table class='table' id='model-table'>
@@ -57,7 +58,7 @@ var model = new function()
 						</div></td>
 				</tr>
 				<tr>
-					<td>Description</td><td><?php echo $exe->form->textarea('description', 'style="width: 100%; height: 80px;"');?></td>
+					<td>Description</td><td><?php echo $exe->form->textarea('description')->attr('style="width: 100%; height: 80px;"');?></td>
 				</tr>
 				<tr>
 					<td>Fields</td>
@@ -73,7 +74,7 @@ var model = new function()
 							<tbody id='data-table-body'>
 							<tr class="data-row">
 								<td><?php echo $exe->form->text('data[name][]');?></td>
-								<td><?php echo $exe->form->textarea('data[description][]', 'style="width: 100%;"');?></td>
+								<td><?php echo $exe->form->textarea('data[description][]')->attr('style="width: 100%;"');?></td>
 								<td>
 									<?php echo $exe->form->select('data[type][]');?>
 								</td>
