@@ -5,6 +5,10 @@ Square API specification
 ```
 git clone https://github.com/digitalgaia/squareapi_spec
 ```
+then run composer install under the project folder
+```
+composer install
+```
 ### serve with PHP built-in server
 - cd into the project folder (squareapi_spec)
 - then run serve the public folder with below command
