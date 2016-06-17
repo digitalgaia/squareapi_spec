@@ -39,7 +39,14 @@ h3
 <div class="row" style="margin-bottom: 100px;">
 	<div style="margin-left: auto; margin-right: auto;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h2>API Development rule of thumbs</h2>
-		<p>A lot of things are still undecided. <a href='http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api' target="_blank">This article</a> <b>may</b> provides some guideline to proper api design. Lot of api design spec on API tab is undecided.</p>
+		<p>A lot of things are still undecided. <a href='http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api' target="_blank">This article</a> <b>may</b> provides some guideline to proper api design. Lot of api design spec on API tab is undecided.
+		<p>Other great references :
+			<ul>
+				<li><a target="_blank" href='http://restcookbook.com/'>http://restcookbook.com</a></li>
+				<li><a href='http://www.restapitutorial.com/lessons/httpmethods.html'>http://www.restapitutorial.com/lessons/httpmethods.html</a></li>
+			</ul>
+		</p>
+		</p>
 		<h3>1. Version</h3>
 		<p>Will be specified through <b>header</b> or probably through uri <b>path</b> [undecided].</p>
 		<h3>2. Authentication</h3>
