@@ -44,6 +44,7 @@ h3
 			<ul>
 				<li><a target="_blank" href='http://restcookbook.com/'>http://restcookbook.com</a></li>
 				<li><a href='http://www.restapitutorial.com/lessons/httpmethods.html'>http://www.restapitutorial.com/lessons/httpmethods.html</a></li>
+				<li><a href='https://philsturgeon.uk/api/2016/01/04/http-rest-api-file-uploads/'>https://philsturgeon.uk/api/2016/01/04/http-rest-api-file-uploads/</a></li>
 			</ul>
 		</p>
 		</p>
