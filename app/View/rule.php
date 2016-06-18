@@ -45,6 +45,7 @@ h3
 				<li><a target="_blank" href='http://restcookbook.com/'>http://restcookbook.com</a></li>
 				<li><a href='http://www.restapitutorial.com/lessons/httpmethods.html'>http://www.restapitutorial.com/lessons/httpmethods.html</a></li>
 				<li><a href='https://philsturgeon.uk/api/2016/01/04/http-rest-api-file-uploads/'>https://philsturgeon.uk/api/2016/01/04/http-rest-api-file-uploads/</a></li>
+				<li><a href='http://stackoverflow.com/questions/12005790/how-to-receive-a-file-via-http-put-with-php'>http://stackoverflow.com/questions/12005790/how-to-receive-a-file-via-http-put-with-php</a></li>
 			</ul>
 		</p>
 		</p>
