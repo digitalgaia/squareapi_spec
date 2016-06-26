@@ -52,9 +52,13 @@ h3
 		<h3>1. Version</h3>
 		<p>Will be specified through <b>header</b> or probably through uri <b>path</b> [undecided].</p>
 		<h3>2. Authentication</h3>
-		<p>- <b>access_token</b> is <a href='#'>required</a> on every request<br>
-		- Token can be generated through <a href='<?php echo $exe->url->create('@spec', array('path' => 'user.auth'));?>'>authentication API</a>
-		</p>
+		<p>We'll be using OAUTH2.</p>
+			<ul>
+				<li><a target='blank' href='http://oauth.net/2/'>http://oauth.net/2/</a></li>
+				<li><a target='blank' href='http://tools.ietf.org/html/rfc6749'>http://tools.ietf.org/html/rfc6749</a></li>
+				<li><a target='blank' href='http://oauthbible.com/'>http://oauthbible.com/</a></li>
+				<li><a target='blank' href='http://alexbilbie.com/2013/02/a-guide-to-oauth-2-grants/'>http://alexbilbie.com/2013/02/a-guide-to-oauth-2-grants/</a></li>
+			</ul>
 		<h3>3. Request</h3>
 		<h4>3.1 Format</h4>
 		<p>To be added later</p>
@@ -91,7 +95,7 @@ h3
 		</code></pre>
 		<p>There're actually another strict formats we can consider if we choose to envelop, <a href='http://jsonapi.org/format'>JSON API</a> for example.</p>
 		<h4>4.2 To not envelop</h4>
-		<p>The different is, the API user will deal directly with http standards. The same goes to the API developer (us). Below is usable status code on non enveloped response.</p>
+		<p>The different is, the API clients will deal directly with http standards. The same goes to the API developer (us). Below is usable status code on non enveloped response.</p>
 		<h4 style="font-size: 1.3em;">4.2.1 HTTP Status Code</h4>
 		<table class='http-status-table'>
 			<tr>
