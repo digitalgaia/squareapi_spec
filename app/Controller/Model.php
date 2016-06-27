@@ -91,9 +91,10 @@ class Model
 			// save.
 			file_put_contents((string) $path, $data);
 			
+			$this->exe->flash->set('success', 'Updated!');
+
 			return $this->exe
 			->redirect
-			->flash('success', 'Updated!')
 			->refresh();
 		}
 
@@ -175,10 +176,9 @@ class Model
 			// save.
 			file_put_contents($path, $data);
 
-			return $this->exe
-			->redirect
-			->flash('success', 'New model added!')
-			->route('view', array('model' => $post['name']));
+			$this->exe->flash->set('success', 'New model added!');
+
+			return $this->exe->redirect->route('view', array('model' => $post['name']));
 		}
 
 		return array(
