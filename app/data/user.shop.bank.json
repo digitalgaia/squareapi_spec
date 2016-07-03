@@ -1,0 +1,20 @@
+[
+	{
+		"path": "GET /shop/:shop-id/banks",
+		"description": "Get list of banks",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : "array:@bank"
+	},
+	{
+		"path": "GET /shop/:shop-id/banks/:shop-bank-id",
+		"description": "Get list of banks",
+		"parameters" : {
+			"required" : ["name"],
+			"optional" : []
+		},
+		"response" : "@bank"
+	}
+]

@@ -1,6 +1,6 @@
 [
 	{
-		"path": "POST /shop/:shop-id/product",
+		"path": "PATCH /shop/:shop-id/product",
 		"description": "create product",
 		"parameters" : {
 			"required" : ["name"],
@@ -8,9 +8,8 @@
 			},
 		"response" : "@product"
 	},
-
 	{
-		"path" : "GET /shop/:shop-id/product",
+		"path" : "GET /shop/:shop-id/products",
 		"description" : "list of product",
 		"parameters" : {
 			"required" : [],
@@ -20,7 +19,7 @@
 	},
 
 	{
-		"path" : "GET /shop/:shop-id/product/:productId",
+		"path" : "GET /shop/:shop-id/products/:product-id",
 		"description" : "get product detail",
 		"parameters" : {
 			"required" : ["limit"],
@@ -30,7 +29,7 @@
 	},
 
 	{
-		"path": "PUT /shop/:shop-id/product/:productId",
+		"path": "PUT /shop/:shop-id/products/:product-id",
 		"description": "update product",
 		"parameters" : {
 			"required" : ["name"],
@@ -40,7 +39,7 @@
 	},
 
 	{
-	"path": "DELETE /shop/:shop-id/product/:productId",
+	"path": "DELETE /shop/:shop-id/products/:product-id",
 		"description": "delete product",
 		"parameters" : {
 			"required" : [],

@@ -8,43 +8,12 @@
 		},
 		"response" : "@payment"
 	},
-
 	{
-		"path": "GET /shop/:shop-id/payment/manual",
-		"description": "list all manual payment",
-		"parameters" : {
-			"required" : [],
-			"optional" : []
-		},
-		"response" : "@payment_bank"
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/payment/manual",
-		"description": "update manual information",
-		"parameters" : {
-			"required" : ["bank","account_name","account_number"],
-			"optional" : []
-		},
-		"response" : "@payment_bank"
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/payment/paypal",
+		"path": "PATCH /shop/:shop-id/payment",
 		"description": "update paypal information",
 		"parameters" : {
 			"required" : ["paypal_information"],
 			"optional" : ["email"]
-		},
-		"response" : ""
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/payment/molpay",
-		"description": "update molpay information",
-		"parameters" : {
-			"required" : ["molpay_information"],
-			"optional" : ["admin","code"]
 		},
 		"response" : ""
 	}
