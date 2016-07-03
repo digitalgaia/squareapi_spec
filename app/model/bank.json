@@ -1,5 +1,5 @@
 {
-    "name": "payment_bank",
+    "name": "bank",
     "relation": [
         {
             "model": "shop",

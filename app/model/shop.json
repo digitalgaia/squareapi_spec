@@ -2,8 +2,28 @@
     "name": "shop",
     "relation": [
         {
-            "model": "currency",
-            "type": "one-to-one"
+            "model": "bank",
+            "type": "one-to-many"
+        },
+        {
+            "model": "category",
+            "type": "one-to-many"
+        },
+        {
+            "model": "tax",
+            "type": "one-to-many"
+        },
+        {
+            "model": "product",
+            "type": "one-to-many"
+        },
+        {
+            "model": "coupon",
+            "type": "one-to-many"
+        },
+        {
+            "model": "manager",
+            "type": "one-to-many"
         }
     ],
     "description": "shop description",
@@ -29,18 +49,12 @@
         {
             "name": "shop_country",
             "description": "shop country",
-            "type": "string",
+            "type": "integer",
             "required": true
         },
         {
             "name": "shop_state",
             "description": "shop state",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "phone number",
-            "description": "shop phone number",
             "type": "string",
             "required": true
         },
@@ -59,12 +73,6 @@
         {
             "name": "description",
             "description": "description",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "about_us",
-            "description": "abou tus",
             "type": "string",
             "required": true
         },
@@ -101,7 +109,7 @@
         {
             "name": "business_tax_id",
             "description": "business tax id",
-            "type": "integer",
+            "type": "string",
             "required": false
         }
     ]

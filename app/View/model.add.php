@@ -42,7 +42,7 @@ var model = new function()
 </style>
 <form action="" method="POST" role="form">
 	<legend><h3>Add new model</h3></legend>
-	<p>Model here basically mean the standard defined object or format to be returned by some of our endpoints. It is <b>not necessarily</b> a database table or our domain entities.</p>
+	<p>Model here basically mean the standard defined object/format/resource to be returned by some of our endpoints. It is <b>not necessarily</b> a database table or our domain entities.</p>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<table class='table' id='model-table'>

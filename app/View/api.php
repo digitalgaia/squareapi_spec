@@ -104,12 +104,12 @@ $(document).ready(function()
 									<?php if(strpos($response, '@') === 0): // return model ?>
 									<?php $model = substr($response, 1);?>
 Status : 200
-Object <a href='<?php echo $exe->url->create("@model.view", array("model"=>$model));?>'><?php echo $response;?></a>
+Resource <a href='<?php echo $exe->url->create("@model.view", array("model"=>$model));?>'><?php echo $response;?></a>
 									<?php elseif(strpos($response, 'array:') === 0): // return array ?>
 									<?php $model = substr($response, 7);?>
 									<?php $url = $exe->url->create("@model.view", array('model' => $model));?>
 Status : 200
-Collection of Object <a href="<?php echo $url;?>">@<?php echo $model;?></a>
+Collection of Resource <a href="<?php echo $url;?>">@<?php echo $model;?></a>
 									<?php elseif($response != ''):?>
 Status : 200
 <?php echo $response;?>

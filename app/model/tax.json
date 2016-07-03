@@ -15,10 +15,16 @@
             "required": true
         },
         {
+            "name": "shop_id",
+            "description": "shop id",
+            "type": "integer",
+            "required": true
+        },
+        {
             "name": "name",
             "description": "name",
             "type": "string",
-            "required": true
+            "required": false
         },
         {
             "name": "value",
@@ -29,12 +35,6 @@
         {
             "name": "status",
             "description": "status",
-            "type": "integer",
-            "required": false
-        },
-        {
-            "name": "shop_id",
-            "description": "shop id",
             "type": "integer",
             "required": false
         }

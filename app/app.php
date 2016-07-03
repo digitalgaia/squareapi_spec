@@ -41,8 +41,7 @@ $app->map['error']->requestable(false)->execute(function($exe)
 	->render();
 });
 
-$app->map['model']->any('/model')
-	->middleware(function($exe)
+$app->map['model']->any('/model')->middleware(function($exe)
 	{
 		$path = $exe->path['app']->path('model');
 
@@ -83,7 +82,9 @@ $app->map['model']->any('/model')
 
 			unlink($path);
 
-			return $exe->redirect->flash('success', 'model ['.$exe->param('model').'] has been deleted.')->route('add');
+			$exe->flash->set('success', 'model ['.$exe->param('model').'] has been deleted.');
+
+			return $exe->redirect->route('add');
 		});
 
 		$models['edit']->any('/edit/[:model]')->execute('controller=model@edit');

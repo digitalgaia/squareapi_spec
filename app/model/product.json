@@ -16,6 +16,10 @@
         {
             "model": "category",
             "type": "one-to-one"
+        },
+        {
+            "model": "shop",
+            "type": "one-to-one"
         }
     ],
     "description": "Product information",
@@ -39,9 +43,15 @@
             "required": true
         },
         {
-            "name": "has_inventory",
-            "description": "has inventory",
-            "type": "integer",
+            "name": "name",
+            "description": "need to query product_description",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "description",
+            "description": "need to query product_description",
+            "type": "string",
             "required": true
         },
         {
@@ -66,12 +76,6 @@
             "name": "price",
             "description": "price",
             "type": "float",
-            "required": true
-        },
-        {
-            "name": "price_by_variation",
-            "description": "price by variation",
-            "type": "integer",
             "required": true
         },
         {
@@ -126,13 +130,13 @@
             "name": "ordered",
             "description": "ordered",
             "type": "integer",
-            "required": true
+            "required": false
         },
         {
             "name": "status",
-            "description": "status",
+            "description": "0 = unpublished\r\n1 = published\r\n2 = deleted",
             "type": "integer",
-            "required": true
+            "required": false
         }
     ]
 }

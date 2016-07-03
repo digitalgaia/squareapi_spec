@@ -1,0 +1,13 @@
+{
+    "name": "user",
+    "relation": [],
+    "description": "",
+    "data": [
+        {
+            "name": "user_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        }
+    ]
+}

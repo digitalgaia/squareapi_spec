@@ -1,13 +1,18 @@
 {
     "name": "shipping",
-    "relation": [],
-    "description": "shipping description",
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "shipping settings",
     "data": [
         {
-            "name": "shipping_id",
-            "description": "shipping id",
+            "name": "shop_id",
+            "description": "",
             "type": "integer",
-            "required": false
+            "required": true
         },
         {
             "name": "shipping_method",
@@ -43,7 +48,7 @@
             "name": "estimated_delivery_time",
             "description": "edt",
             "type": "integer",
-            "required": true
+            "required": false
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "webstore",
     "relation": [],
-    "description": "web store description",
+    "description": "Webstore setting model",
     "data": [
         {
             "name": "webstore_id",

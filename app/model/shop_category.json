@@ -1,24 +1,24 @@
 {
-    "name": "manager",
+    "name": "shop_category",
     "relation": [
         {
             "model": "shop",
             "type": "one-to-one"
         }
     ],
-    "description": "manager description",
+    "description": "related doctrine model : category_to_shop",
     "data": [
         {
             "name": "shop_id",
             "description": "",
-            "type": "integer",
+            "type": "string",
             "required": false
         },
         {
-            "name": "user_id",
+            "name": "sort_index",
             "description": "",
             "type": "integer",
-            "required": true
+            "required": false
         }
     ]
 }

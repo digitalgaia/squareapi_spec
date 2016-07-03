@@ -1,0 +1,64 @@
+{
+    "name": "order_product",
+    "relation": [
+        {
+            "model": "product",
+            "type": "one-to-one"
+        },
+        {
+            "model": "order",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "Order products",
+    "data": [
+        {
+            "name": "order_product_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "product_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "order_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "quantity",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "price",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "tax_amount",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "tax_rate",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "tax_name",
+            "description": "",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

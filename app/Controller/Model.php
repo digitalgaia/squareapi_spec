@@ -34,7 +34,9 @@ class Model
 			'integer' => 'integer',
 			'float' => 'float',
 			'boolean' => 'boolean',
-			'datetime' => 'datetime'));
+			'datetime' => 'datetime',
+			'text' => 'text'
+			));
 
 		if($request->getMethod() == 'POST')
 		{
@@ -117,7 +119,9 @@ class Model
 			'string' => 'string',
 			'integer' => 'integer',
 			'float' => 'float',
-			'boolean' => 'boolean'));
+			'boolean' => 'boolean',
+			'text' => 'text'
+			));
 
 		$this->exe->form->set('data[type][]', 'string');
 

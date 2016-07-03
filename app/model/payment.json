@@ -2,15 +2,21 @@
     "name": "payment",
     "relation": [
         {
-            "model": "payment_bank",
+            "model": "shop",
             "type": "one-to-one"
         }
     ],
-    "description": "payment information",
+    "description": "shop's payment information",
     "data": [
         {
             "name": "id",
             "description": "currency id",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "name": "shop_id",
+            "description": "",
             "type": "integer",
             "required": true
         },
@@ -42,7 +48,7 @@
             "name": "paypal_email",
             "description": "paypal_email",
             "type": "string",
-            "required": true
+            "required": false
         }
     ]
 }

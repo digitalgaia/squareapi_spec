@@ -1,12 +1,12 @@
 {
-    "name": "promotion",
+    "name": "coupon",
     "relation": [
         {
             "model": "shop",
             "type": "one-to-one"
         }
     ],
-    "description": "promotion information",
+    "description": "coupon information",
     "data": [
         {
             "name": "coupon_id",
@@ -27,7 +27,7 @@
             "required": true
         },
         {
-            "name": "coupon type",
+            "name": "coupon_type",
             "description": "coupon type",
             "type": "integer",
             "required": true

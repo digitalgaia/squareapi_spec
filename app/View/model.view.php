@@ -53,9 +53,6 @@
 						</table>
 					</td>
 				</tr>
-				<tr>
-					<td colspan="2"><input type='submit' class='btn btn-primary' style="background: #5f7dc5;" /></td>
-				</tr>
 			</table>
 		</div>
 	</div>

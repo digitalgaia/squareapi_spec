@@ -2,27 +2,25 @@
     "name": "order",
     "relation": [
         {
-            "model": "product",
+            "model": "order_product",
+            "type": "one-to-many"
+        },
+        {
+            "model": "shop",
             "type": "one-to-one"
         }
     ],
     "description": "order description",
     "data": [
         {
-            "name": "id order",
-            "description": " order id unique",
+            "name": "order_id",
+            "description": "order id",
             "type": "integer",
             "required": true
         },
         {
-            "name": "customer",
-            "description": " order customer",
-            "type": "string",
-            "required": true
-        },
-        {
-            "name": "date",
-            "description": " order date",
+            "name": "shop_id",
+            "description": "",
             "type": "integer",
             "required": true
         },
@@ -33,28 +31,214 @@
             "required": true
         },
         {
-            "name": "total",
-            "description": "order total ",
-            "type": "integer",
+            "name": "date_purchased",
+            "description": " order date",
+            "type": "datetime",
             "required": true
         },
         {
-            "name": "tracking number",
+            "name": "tracking_no",
             "description": "order tracking number ",
             "type": "integer",
-            "required": true
+            "required": false
         },
         {
-            "name": "payment",
-            "description": "order payment",
+            "name": "shop_id",
+            "description": "",
             "type": "integer",
-            "required": true
+            "required": false
         },
         {
-            "name": "action",
-            "description": "order action",
+            "name": "user_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "coupon_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "coupon_code",
+            "description": "",
             "type": "string",
-            "required": true
+            "required": false
+        },
+        {
+            "name": "molpay_status",
+            "description": "0 Pending\r\n1 Molpay-pending\r\n2 Success\r\n3 Failed",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "sub_total",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "total_shipping",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "total_tax",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "total_coupon",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "total_price",
+            "description": "",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "different_shipping",
+            "description": "flag to determine whether shipping is different than billing address or not",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "customer_name",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_company",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_address1",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_address2",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_city",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_postcode",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_state",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_country",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_phone",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "customer_email",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_name",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_company",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_address1",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_address2",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_city",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_postcode",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_state",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_country",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_phone",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_email",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "payment_method",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "shipping_method",
+            "description": "",
+            "type": "string",
+            "required": false
         }
     ]
 }
