@@ -9,20 +9,8 @@
     "description": "table : shop_info",
     "data": [
         {
-            "name": "id",
-            "description": "currency id",
-            "type": "integer",
-            "required": true
-        },
-        {
             "name": "shop_id",
             "description": "",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "currency",
-            "description": "currency payment type ",
             "type": "integer",
             "required": true
         },

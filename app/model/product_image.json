@@ -25,12 +25,6 @@
             "description": "absolute image path",
             "type": "string",
             "required": true
-        },
-        {
-            "name": "filename",
-            "description": "image filename ",
-            "type": "integer",
-            "required": false
         }
     ]
 }

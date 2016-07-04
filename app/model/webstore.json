@@ -9,12 +9,6 @@
     "description": "Webstore setting model",
     "data": [
         {
-            "name": "webstore_id",
-            "description": "webstore id",
-            "type": "integer",
-            "required": true
-        },
-        {
             "name": "shop_id",
             "description": "shop id",
             "type": "integer",
@@ -24,25 +18,25 @@
             "name": "coverphoto_enabled",
             "description": "coverphoto enabled",
             "type": "integer",
-            "required": true
+            "required": false
         },
         {
             "name": "pagination_enabled",
             "description": "pagination_enabled",
             "type": "integer",
-            "required": true
+            "required": false
         },
         {
             "name": "css_style",
             "description": "css style",
             "type": "string",
-            "required": true
+            "required": false
         },
         {
             "name": "webstore_logo",
             "description": "webstore logo",
             "type": "string",
-            "required": true
+            "required": false
         }
     ]
 }

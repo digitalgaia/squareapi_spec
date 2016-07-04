@@ -23,6 +23,12 @@
             "description": "",
             "type": "integer",
             "required": false
+        },
+        {
+            "name": "is_admin",
+            "description": "column : original_owner",
+            "type": "integer",
+            "required": false
         }
     ]
 }
