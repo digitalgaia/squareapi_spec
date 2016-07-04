@@ -1,0 +1,40 @@
+[
+	{
+		"path": "GET /shop/:shop-id/managers",
+		"description": "List of manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@manager"
+	},
+	{
+		"path": "POST /shop/:shop-id/managers",
+		"description": "List of manager",
+		"parameters" : {
+			"required" : ["email"],
+			"optional" : []
+		},
+		"response" : "@manager"
+	},
+	{
+		"path": "GET /shop/:shop-id/managers/:user-id",
+		"description": "upgrade manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@manager"
+	},
+	{
+		"path": "POST /shop/:shop-id/managers/:user-id/upgrade",
+		"description": "upgrade manager",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@manager"
+	}
+]
+
+

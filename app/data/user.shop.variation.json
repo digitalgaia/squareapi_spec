@@ -1,37 +1,34 @@
 [
 	{
-		"path": "GET /shop/:shop-id/variation",
-		"description": "return list of variation",
+		"path": "GET /shop/:shop-id/variations",
+		"description": "return list of product options",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@variation"
+	},
+	{
+		"path": "PATCH /shop/:shop-id/variations/:variation-id",
+		"description": "update product option",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	},
+	{
+		"path": "GET /shop/:shop-id/variations/:variation-id",
+		"description": "Get product option",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
 		"response" : "@variation"
 	},
-
 	{
-		"path": "PUT /shop/:shop-id/variation",
-		"description": "update variation",
-		"parameters" : {
-			"required" : ["variation_name"],
-			"optional" : ["for","options"]
-		},
-		"response" : ""
-	},
-
-	{
-		"path": "PUT /shop/:shop-id/variation/assign/:assignId",
-		"description": "update assign to variation",
-		"parameters" : {
-			"required" : ["product"],
-			"optional" : []
-		},
-		"response" : ""
-	},
-
-	{
-	"path": "DELETE /shop/:shop-id/variation/:variationId",
-		"description": "delete variation",
+		"path": "DELETE /shop/:shop-id/variations/:variation-id",
+		"description": "delete product option",
 		"parameters" : {
 			"required" : [],
 			"optional" : []

@@ -1,7 +1,7 @@
 [
 	{
 		"path": "GET /shop/:shop-id/categories",
-		"description": "Get list of category",
+		"description": "Get list of shop's product category",
 		"parameters" : {
 			"required" : ["name"],
 			"optional" : []
@@ -16,6 +16,14 @@
 			"optional" : []
 		},
 		"response" : "@shop_category"
+	},
+	{
+		"path": "PATCH /shop/:shop-id/categories/:category-id",
+		"description": "Update category",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
 	}
 ]
-

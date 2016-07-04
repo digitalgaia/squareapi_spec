@@ -1,0 +1,56 @@
+[
+	{
+		"path": "GET /shop/:shop-id/orders",
+		"description": "get list of order",
+		"parameters" : {
+			"required" : ["page"],
+			"optional" : []
+		},
+		"response" : "array:@order"
+	},
+	{
+		"path": "GET /shop/:shop-id/orders/:order-id",
+		"description": "Get order detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "@order"
+	},
+	{
+		"path": "GET /shop/:shop-id/orders/:order-id/status",
+		"description": "get current status",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@order"
+	},
+	{
+		"path" : "GET /shop/:shop-id/orders/:order-id/products",
+		"description" : "get product detail",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@order_product"
+	},
+	{
+		"path": "POST /shop/:shop-id/orders/:order-id/status",
+		"description": "Change status",
+		"parameters" : {
+			"required" : ["status"],
+			"optional" : []
+		},
+		"response" : "array:@order"
+	},
+	{
+		"path": "DELETE /shop/:shop-id/orders/:order-id",
+		"description": "Delete order",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	}
+]

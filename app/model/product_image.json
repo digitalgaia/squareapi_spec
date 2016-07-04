@@ -10,7 +10,7 @@
     "data": [
         {
             "name": "product_image_id",
-            "description": "product image id",
+            "description": "column: product_image_id",
             "type": "integer",
             "required": true
         },

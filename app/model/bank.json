@@ -6,7 +6,7 @@
             "type": "one-to-one"
         }
     ],
-    "description": "payment information",
+    "description": "table : shop_bank",
     "data": [
         {
             "name": "shop_bank_id",

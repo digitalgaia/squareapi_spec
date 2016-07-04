@@ -1,10 +1,10 @@
 [
 	{
-		"path": "PATCH /shop/:shop-id/product",
-		"description": "create product",
+		"path": "POST /shop/:shop-id/products",
+		"description": "Add a new product",
 		"parameters" : {
-			"required" : ["name"],
-			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
+			"required" : [],
+			"optional" : []
 			},
 		"response" : "@product"
 	},
@@ -17,30 +17,36 @@
 		},
 		"response" : "array:@product"
 	},
-
 	{
 		"path" : "GET /shop/:shop-id/products/:product-id",
 		"description" : "get product detail",
 		"parameters" : {
-			"required" : ["limit"],
+			"required" : [],
 			"optional" : []
 		},
-		"response" : "array:@product"
+		"response" : "@product"
 	},
-
 	{
-		"path": "PUT /shop/:shop-id/products/:product-id",
-		"description": "update product",
+		"path" : "POST /shop/:shop-id/products/:product-id/publish",
+		"description" : "Publish product",
 		"parameters" : {
-			"required" : ["name"],
-			"optional" : ["category","model","price","edt","edt_global","description","tax","variation","quantity","weight"]
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	},
+	{
+		"path": "PATCH /shop/:shop-id/products/:product-id",
+		"description": "Update product",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
 			},
 		"response" : ""
 	},
-
 	{
 	"path": "DELETE /shop/:shop-id/products/:product-id",
-		"description": "delete product",
+		"description": "Delete product",
 		"parameters" : {
 			"required" : [],
 			"optional" : []

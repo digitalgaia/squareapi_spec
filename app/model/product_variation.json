@@ -2,57 +2,35 @@
     "name": "product_variation",
     "relation": [
         {
-            "model": "product",
+            "model": "variation_option",
             "type": "one-to-one"
-        },
-        {
-            "model": "product_variation_option",
-            "type": "one-to-many"
         }
     ],
-    "description": "product variation information",
+    "description": "Table : product_variation",
     "data": [
         {
             "name": "product_variation_id",
-            "description": "unique id",
+            "description": "id",
             "type": "integer",
             "required": true
         },
         {
             "name": "product_id",
-            "description": "product id",
+            "description": "variation id",
             "type": "integer",
             "required": true
         },
         {
-            "name": "product_option_id",
-            "description": "variation name",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "product_option_value_id",
-            "description": "product option value id",
-            "type": "integer",
-            "required": false
-        },
-        {
-            "name": "variation_price",
-            "description": "variation price",
-            "type": "float",
-            "required": false
-        },
-        {
-            "name": "variation_weight",
-            "description": "variation weight",
-            "type": "integer",
-            "required": false
-        },
-        {
-            "name": "status",
-            "description": "status",
+            "name": "name",
+            "description": "option name",
             "type": "string",
-            "required": false
+            "required": true
+        },
+        {
+            "name": "quantity",
+            "description": "quantity left. Table : product_variation_stock",
+            "type": "integer",
+            "required": true
         }
     ]
 }

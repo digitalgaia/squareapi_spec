@@ -14,10 +14,6 @@
             "type": "one-to-one"
         },
         {
-            "model": "category",
-            "type": "one-to-one"
-        },
-        {
             "model": "shop",
             "type": "one-to-one"
         }
@@ -40,6 +36,12 @@
             "name": "tax_id",
             "description": "tax id",
             "type": "integer",
+            "required": true
+        },
+        {
+            "name": "has_variation",
+            "description": "0 if product not attached with any variation.\r\n1 if has product_variation",
+            "type": "string",
             "required": true
         },
         {
@@ -124,12 +126,6 @@
             "name": "fan_discount_rate",
             "description": "fan discount rate",
             "type": "float",
-            "required": true
-        },
-        {
-            "name": "ordered",
-            "description": "ordered",
-            "type": "integer",
             "required": false
         },
         {

@@ -1,12 +1,18 @@
 {
     "name": "user",
     "relation": [],
-    "description": "",
+    "description": "table : user",
     "data": [
         {
-            "name": "user_id",
-            "description": "",
+            "name": "id",
+            "description": "column : user_id",
             "type": "integer",
+            "required": false
+        },
+        {
+            "name": "points",
+            "description": "",
+            "type": "float",
             "required": false
         }
     ]

@@ -6,7 +6,7 @@
             "type": "one-to-one"
         }
     ],
-    "description": "coupon information",
+    "description": "table : coupon",
     "data": [
         {
             "name": "coupon_id",

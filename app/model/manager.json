@@ -4,21 +4,25 @@
         {
             "model": "shop",
             "type": "one-to-one"
+        },
+        {
+            "model": "user",
+            "type": "one-to-one"
         }
     ],
-    "description": "manager description",
+    "description": "table : shop_owner",
     "data": [
         {
             "name": "shop_id",
             "description": "",
             "type": "integer",
-            "required": false
+            "required": true
         },
         {
             "name": "user_id",
             "description": "",
             "type": "integer",
-            "required": true
+            "required": false
         }
     ]
 }

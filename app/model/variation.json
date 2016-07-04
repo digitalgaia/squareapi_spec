@@ -2,54 +2,38 @@
     "name": "variation",
     "relation": [
         {
-            "model": "product",
+            "model": "shop",
             "type": "one-to-one"
         },
         {
-            "model": "product_variation",
-            "type": "one-to-one"
-        },
-        {
-            "model": "product_variation_option",
-            "type": "one-to-one"
+            "model": "variation_option",
+            "type": "one-to-many"
         }
     ],
-    "description": "variation descritption",
+    "description": "Database table : product_option",
     "data": [
         {
-            "name": "product_variation_id",
-            "description": "product variation id",
+            "name": "variation_id",
+            "description": "product_option_id",
             "type": "integer",
             "required": true
         },
         {
-            "name": "product_id",
-            "description": "product id",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "product_option_id",
-            "description": "product option id",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "product_option_value_id",
-            "description": "product option value id",
-            "type": "integer",
-            "required": true
-        },
-        {
-            "name": "variation_price",
-            "description": "variation price",
-            "type": "float",
-            "required": true
-        },
-        {
-            "name": "",
+            "name": "shop_id",
             "description": "",
-            "type": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "column : variation_name",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "for",
+            "description": "column : option_name",
+            "type": "string",
             "required": false
         }
     ]

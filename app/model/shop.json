@@ -6,10 +6,6 @@
             "type": "one-to-many"
         },
         {
-            "model": "category",
-            "type": "one-to-many"
-        },
-        {
             "model": "tax",
             "type": "one-to-many"
         },
@@ -26,8 +22,14 @@
             "type": "one-to-many"
         }
     ],
-    "description": "shop description",
+    "description": "Table : shop and shop_info",
     "data": [
+        {
+            "name": "shop_id",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
         {
             "name": "shop_info",
             "description": "shop info",

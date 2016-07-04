@@ -10,7 +10,7 @@
             "type": "one-to-one"
         }
     ],
-    "description": "Order products",
+    "description": "table : order_product",
     "data": [
         {
             "name": "order_product_id",

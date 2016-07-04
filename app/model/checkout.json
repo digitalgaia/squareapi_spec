@@ -1,12 +1,12 @@
 {
-    "name": "payment",
+    "name": "checkout",
     "relation": [
         {
             "model": "shop",
             "type": "one-to-one"
         }
     ],
-    "description": "shop's payment information",
+    "description": "table : shop_info",
     "data": [
         {
             "name": "id",

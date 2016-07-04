@@ -10,7 +10,7 @@
             "type": "one-to-one"
         }
     ],
-    "description": "related doctrine model : productToCategory",
+    "description": "table : product_to_category",
     "data": [
         {
             "name": "product_id",

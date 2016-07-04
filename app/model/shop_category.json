@@ -6,8 +6,14 @@
             "type": "one-to-one"
         }
     ],
-    "description": "related doctrine model : category_to_shop",
+    "description": "table category, category_to_shop",
     "data": [
+        {
+            "name": "shop_category_id",
+            "description": "category_to_shop_id",
+            "type": "string",
+            "required": false
+        },
         {
             "name": "shop_id",
             "description": "",
@@ -18,6 +24,12 @@
             "name": "sort_index",
             "description": "",
             "type": "integer",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "",
+            "type": "string",
             "required": false
         }
     ]

@@ -6,7 +6,7 @@
             "type": "one-to-one"
         }
     ],
-    "description": "shipping settings",
+    "description": "Table : shop_info",
     "data": [
         {
             "name": "shop_id",

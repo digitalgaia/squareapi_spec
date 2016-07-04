@@ -16,5 +16,14 @@
 			"optional" : []
 		},
 		"response" : "@bank"
+	},
+	{
+		"path": "DELETE /shop/:shop-id/banks/:shop-bank-id",
+		"description": "Delete bank record",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
 	}
 ]

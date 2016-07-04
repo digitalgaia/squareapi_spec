@@ -1,0 +1,30 @@
+{
+    "name": "variation_option",
+    "relation": [
+        {
+            "model": "variation",
+            "type": "one-to-one"
+        }
+    ],
+    "description": "Database table : product_option_value and product_option_value_to_option",
+    "data": [
+        {
+            "name": "variation_option_id",
+            "description": "",
+            "type": "integer",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "sort_order",
+            "description": "",
+            "type": "integer",
+            "required": false
+        }
+    ]
+}

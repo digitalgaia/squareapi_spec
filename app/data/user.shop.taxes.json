@@ -1,7 +1,6 @@
 [
-
 	{
-		"path": "POST /shop/:shop-id/tax",
+		"path": "POST /shop/:shop-id/taxes",
 		"description": "add new tax",
 		"parameters" : {
 			"required" : ["name","value"],
@@ -9,19 +8,17 @@
 		},
 		"response" :"@tax"
 	},
-
 	{
-		"path": "GET /shop/:shop-id/tax",
+		"path": "GET /shop/:shop-id/taxes",
 		"description": "list of tax",
 		"parameters" : {
 			"required" : [],
 			"optional" : []
 		},
-		"response" : "@tax"
+		"response" : "array:@tax"
 	},
-
 	{
-		"path" : "GET /shop/:shop-id/:taxId",
+		"path" : "GET /shop/:shop-id/taxes/:tax-id",
 		"description" : "get tax detail",
 		"parameters" : {
 			"required" : [],
@@ -29,9 +26,8 @@
 		},
 		"response" : "@tax"
 	},
-
 	{
-		"path": "PUT /shop/:shop-id/:taxId",
+		"path": "PATCH /shop/:shop-id/taxes/:tax-id",
 		"description": "update tax",
 		"parameters" : {
 			"required" : ["name","value"],
@@ -39,9 +35,8 @@
 		},
 		"response" : ""
 	},
-
 	{
-		"path": "DELETE /shop/:shop-id/:taxId",
+		"path": "DELETE /shop/:shop-id/taxes/:tax-id",
 		"description": "delete tax",
 		"parameters" : {
 			"required" : [],

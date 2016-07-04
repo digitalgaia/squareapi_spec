@@ -1,0 +1,20 @@
+[
+	{
+		"path": "GET /shop/:shop-id/checkout",
+		"description": "Get shop checkout's information",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : "array:@checkout"
+	},
+	{
+		"path": "PATCH /shop/:shop-id/checkout",
+		"description": "Update shop checkout's information",
+		"parameters" : {
+			"required" : [],
+			"optional" : []
+		},
+		"response" : ""
+	}
+]

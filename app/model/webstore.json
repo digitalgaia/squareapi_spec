@@ -1,6 +1,11 @@
 {
     "name": "webstore",
-    "relation": [],
+    "relation": [
+        {
+            "model": "shop",
+            "type": "one-to-one"
+        }
+    ],
     "description": "Webstore setting model",
     "data": [
         {
