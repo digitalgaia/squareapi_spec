@@ -12,7 +12,7 @@
 		"categories",
 		"products",
 		"taxes",
-		"product-options",
+		"variations",
 		"orders"],
 	"shop" : ["", "product", "cart"],
 	"user" : ["auth"]
